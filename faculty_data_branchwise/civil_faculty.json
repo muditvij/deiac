@@ -1,0 +1,107 @@
+[
+    {
+        "name": "Prof. Sanjay Kumar Srivastava",
+        "designation": "Professor & Head of Department",
+        "phone": null,
+        "email": "ssrivastava@dei.ac.in",
+        "image": "/images/Faculty%20pictures/Dr%20Sanjay%20Srivastava.jpg"
+    },
+    {
+        "name": "Ms. Krishma Yadav",
+        "designation": "Assistant Professor",
+        "phone": null,
+        "email": "karishmayadav@dei.ac.in",
+        "image": "/images/Faculty%20pictures/Mrs.%20karishma%20Yadav.jpg"
+    },
+    {
+        "name": "Dr. Ishant Singhal",
+        "designation": "Dr. Ishant SinghalAssistant Professor",
+        "phone": null,
+        "email": "ishantsinghal@dei.ac.in",
+        "image": "/images/Faculty%20pictures/Dr%20Ishant.PNG"
+    },
+    {
+        "name": "Mr. Devesh Jaysawal",
+        "designation": "Mr. Devesh JaysawalAssistant Professor",
+        "phone": null,
+        "email": "deveshjaysawal@dei.ac.in",
+        "image": "/images/Faculty%20pictures/Mr%20Devesh%20Jaysawal.jpg"
+    },
+    {
+        "name": "Mr. Mohd Sharique Ahmad",
+        "designation": "Mr. Mohd Sharique AhmadGuest Faculty",
+        "phone": null,
+        "email": "mohdsharique@dei.ac.in",
+        "image": "/images/Faculty%20pictures/IMG_3168.jpg"
+    },
+    {
+        "name": "Mr. Randeep Lohra",
+        "designation": "Mr. Randeep LohraGuest Faculty",
+        "phone": null,
+        "email": "randeeplohra@dei.ac.in",
+        "image": "/images/Faculty%20pictures/Mr%20Randeep.jpg"
+    },
+    {
+        "name": "Mr. Bhanu Prakash Sharma",
+        "designation": "Mr. Bhanu Prakash SharmaGuest Faculty",
+        "phone": null,
+        "email": "bhanuprakashsharma001@yahoo.com",
+        "image": "/images/Faculty%20pictures/Sh.%20B%20P%20Sharma.jpg"
+    },
+    {
+        "name": "Mr. ChandraMohan",
+        "designation": "Honorary Faculty",
+        "phone": null,
+        "email": "ankitmohankhattar@gmail.com",
+        "image": "/images/Faculty%20pictures/Sh.%20Chandramohan.jpg"
+    },
+    {
+        "name": "Mr. S. Suresh",
+        "designation": "HonoraryFaculty",
+        "phone": null,
+        "email": "suranraj@gmail.com",
+        "image": "/images/Faculty%20pictures/Mr.%20S%20Suresh.jpg"
+    },
+    {
+        "name": "Mr. Rajat Gupta",
+        "designation": "Guest Faculty",
+        "phone": null,
+        "email": "rajatgupta@dei.ac.in",
+        "image": "/images/Faculty%20pictures/Mr%20Rajat%20Gupta.jpg"
+    },
+    {
+        "name": "Ms. Divyanshi Sharma",
+        "designation": "Guest Faculty",
+        "phone": null,
+        "email": "divyanshi.sharma@dei.ac.in",
+        "image": "/images/Faculty%20pictures/Miss%20Divyanshi%20Sharma.jpg"
+    },
+    {
+        "name": "Ms. Priyanka Chauhan",
+        "designation": "Guest Faculty",
+        "phone": null,
+        "email": "prianca35@dei.ac.in",
+        "image": "/images/Faculty%20pictures/Miss%20Priyanka.jpg"
+    },
+    {
+        "name": "Ms. Neerja Singh",
+        "designation": "Guest Faculty",
+        "phone": null,
+        "email": "neerja.singh@dei.ac.in",
+        "image": "/images/Faculty%20pictures/Miss%20Neerja.jpg"
+    },
+    {
+        "name": "Mr. Gaurav Kumar",
+        "designation": "Senior Technical Assistant",
+        "phone": null,
+        "email": "kumaragrawal04121992@gmail.com",
+        "image": "/images/Faculty%20pictures/Gaurav%20Pic.jpg"
+    },
+    {
+        "name": "Mr. Sonu Kumar",
+        "designation": "Laboratory Assistant",
+        "phone": null,
+        "email": "sonukumartdl100@gmail.com",
+        "image": "/images/Faculty%20pictures/sonu.png"
+    }
+]

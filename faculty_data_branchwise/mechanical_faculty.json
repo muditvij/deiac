@@ -1,0 +1,192 @@
+[
+    {
+        "name": "Prof. Rahul Swarup Sharma",
+        "designation": "Professor & Head",
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtorahulswarup@rediffmail.comrahulswarup@rediffmail.com",
+            "mailtorahulswarup@dei.ac.inrahulswarup@dei.ac.in"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Prof. Rahul Swarup.jpg"
+    },
+    {
+        "name": "Prof. Rahul Caprihan",
+        "designation": "Professor",
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtorcaprihan@dei.ac.inrcaprihan@dei.ac.in"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Dr Rahul Caprihan.jpg"
+    },
+    {
+        "name": "Prof. Dayal Saran Mishra",
+        "designation": "Professor Emeritus",
+        "phone": "Tel. - 0562-6548399",
+        "emails": [
+            "mailtodsmishra.hme@gmail.comdsmishra.hme@gmail.com"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Dr D. S. Mishra.jpg"
+    },
+    {
+        "name": "Prof. Ranjit Singh",
+        "designation": "Professor Emeritus",
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtorsingh_dei@yahoo.comrsingh_dei@yahoo.com"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Dr Ranjit Singh.jpg"
+    },
+    {
+        "name": "Prof. V. Soami Das",
+        "designation": "Professor",
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtovsoamidas@gmail.comvsoamidas@gmail.com"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Dr V. Soami Das.jpg"
+    },
+    {
+        "name": "Prof. D. Ganeshwar Rao",
+        "designation": "Professor",
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtodgrao.dei@gmail.comdgrao.dei@gmail.com"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Dr D. G. Rao.jpg"
+    },
+    {
+        "name": "Prof. Sanjay Kumar Srivastava",
+        "designation": "Professor",
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtossrivastava@dei.ac.inssrivastava@dei.ac.in"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Dr S. K. Srivastava.jpg"
+    },
+    {
+        "name": "Mr. Ram Chand Gupta",
+        "designation": "Associate Professor",
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtoramchandgupta@gmail.comramchandgupta@gmail.com"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Mr. Ram Chand Gupta.jpg"
+    },
+    {
+        "name": "Dr. Ankit Sahai",
+        "designation": "Associate Professor",
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtosahaiankit@rediffmail.comsahaiankit@rediffmail.com"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Mr. Ankit Sahai.jpg"
+    },
+    {
+        "name": "Mr. Bhupesh Kumar",
+        "designation": "Assistant Professor",
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtobhupesh_satsangi@rediffmail.combhupesh_satsangi@rediffmail.com"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Mr. Bhupesh Kumar Satsangi.jpg"
+    },
+    {
+        "name": "Mr. Anami Saran",
+        "designation": "Assistant Professor",
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtoanamisaran@gmail.comanamisaran@gmail.com"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Anami Saran.png"
+    },
+    {
+        "name": "Mr. Gurmukh Das",
+        "designation": "Assistant Professor",
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtogurumukh_das@rediffmail.comgurumukh_das@rediffmail.com"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Mr. Gurmukh Das.jpg"
+    },
+    {
+        "name": "Dr. Ashok Yadav",
+        "designation": "Associate Professor",
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtoashokyadavaca@gmail.comashokyadavaca@gmail.com"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Dr.Ashok Yadav.jpg"
+    },
+    {
+        "name": "Dr. Kumar Ratnakar",
+        "designation": null,
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtokumar.ratnakar@gmail.com"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Mr__Kumar_Ratnakar.jpg"
+    },
+    {
+        "name": "Dr. Atul Suri",
+        "designation": null,
+        "phone": "Tel:0562-6548399",
+        "emails": [
+            "mailtoatulsuri@dei.ac.in",
+            "mailtoatulsuridei@gmail.com"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Mr. Atulsuri.jpg"
+    },
+    {
+        "name": "Dr. Anurag Gupta",
+        "designation": null,
+        "phone": "Tel:0562-6548399",
+        "emails": [
+            "mailtoanurag.gupta@dei.ac.inanurag.gupta@dei.ac.in",
+            "mailtodeianuraggupta@gmail.comdeianuraggupta@gmail.com"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Mr. Anurag Gupta.jpg"
+    },
+    {
+        "name": "Mr. Padam Das",
+        "designation": "Advisor Workshop",
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtopadamdas@gmail.compadamdas@gmail.com"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Mr. Padam Das.jpg"
+    },
+    {
+        "name": null,
+        "designation": "Assistant Professor",
+        "phone": "Tel: 0562-6548399",
+        "emails": null,
+        "image": "/engineering/images/mechFacultyPics/Rajesh-mech-pic.png"
+    },
+    {
+        "name": "Dr. Aditya",
+        "designation": null,
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtoadityasharma@dei.ac.inadityasharma@dei.ac.in"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Aditya_New.jpeg"
+    },
+    {
+        "name": "Mr. Manoj Kumar",
+        "designation": null,
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtomanojkumar@dei.ac.in"
+        ],
+        "image": "/engineering/images/mechFacultyPics/Manoj Kumar.jpg"
+    },
+    {
+        "name": "Dr. Manoj Dixit",
+        "designation": null,
+        "phone": "Tel: 0562-6548399",
+        "emails": [
+            "mailtomanojdixit@dei.ac.in"
+        ],
+        "image": "/engineering/images/mechFacultyPics/ManojDixit.jpg"
+    }
+]

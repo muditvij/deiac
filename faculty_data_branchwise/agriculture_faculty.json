@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Dr. Ashok Yadav",
+        "designation": "Associate Professor & Head of Department",
+        "phone": "Tel: 0562-6548399",
+        "email": "ashokyadav@dei.ac.in",
+        "image": "/images/Faculty%20pictures/DR.%20ASHOK%20YADAV.png"
+    },
+    {
+        "name": "Dr. Anjitha Krishna P. R.",
+        "designation": "Assistant Professor",
+        "phone": "Tel: 0562-6548399",
+        "email": "anjithakrishna@dei.ac.in",
+        "image": "/images/Faculty%20pictures/DR.%20ANJITHA%20KRISHNA%20PR.png"
+    },
+    {
+        "name": "Dr. Madhuri Dubey",
+        "designation": "Assistant Professor",
+        "phone": "Tel: 0562-6548399",
+        "email": "madhuridubey@dei.ac.in",
+        "image": "/images/Faculty%20pictures/DR.%20MADHURI%20DUBEY.png"
+    },
+    {
+        "name": "Dr. Priyanka Gunjan",
+        "designation": "Assistant Professor",
+        "phone": null,
+        "email": "priyankagunjan@dei.ac.in",
+        "image": "/images/Faculty%20pictures/DR.%20PRIYANKA%20GUNJAN.png"
+    },
+    {
+        "name": "",
+        "designation": "Assistant Professor",
+        "phone": null,
+        "email": "mukeshseetpal@dei.ac.in",
+        "image": "/images/Faculty%20pictures/ER.%20MUKESH%20KUMAR%20SEETPAL.png"
+    },
+    {
+        "name": null,
+        "designation": "Senior Technical Assistant",
+        "phone": "Tel: 0562-6548399",
+        "email": "shivamkumar156988@gmail.com",
+        "image": "/images/Faculty%20pictures/MR.%20SHIVAM.png"
+    },
+    {
+        "name": "",
+        "designation": "Junior Technical Assistant",
+        "phone": "Tel: 0562-6548399",
+        "email": "sonukumar.aug02@gmail.com",
+        "image": "/images/Faculty%20pictures/MR.%20SONU.png"
+    }
+]

@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty of Engineering | Dayalbagh Educational Institute</title>
+    <link rel="shortcut icon" href="https://www.dei.ac.in/engineering/templates/jsn_epic_free/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0056b3;
+            --secondary-blue: #1a73e8;
+            --accent-gold: #d4af37;
+            --dark-blue: #003366;
+            --light-blue: #e8f4f8;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --dark-gray: #6c757d;
+            --text-dark: #2c3e50;
+            --text-light: #5a6c7d;
+            --success: #28a745;
+            --danger: #dc3545;
+            --warning: #ffc107;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+            --border-radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--dark-blue);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--accent-gold);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .top-bar {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 8px 0;
+            font-size: 0.85rem;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-links a {
+            color: white;
+            margin-left: 20px;
+        }
+
+        .top-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .main-header {
+            padding: 20px 0;
+            background-color: white;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            height: 80px;
+        }
+
+        .institute-info h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .institute-info p {
+            color: var(--dark-gray);
+            font-size: 1rem;
+        }
+
+        /* Navigation */
+        .main-navigation {
+            background-color: var(--primary-blue);
+            position: relative;
+            z-index: 999;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu > li {
+            position: relative;
+        }
+
+        .nav-menu > li > a {
+            display: block;
+            padding: 16px 20px;
+            color: white;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-menu > li:hover > a {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-menu > li.active > a {
+            background-color: var(--accent-gold);
+            color: var(--dark-blue);
+        }
+
+        /* Dropdown */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            min-width: 220px;
+            box-shadow: var(--shadow-lg);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 1000;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .nav-menu > li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 12px 20px;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--medium-gray);
+        }
+
+        .dropdown a:hover {
+            background-color: var(--light-blue);
+            color: var(--primary-blue);
+        }
+
+        .dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            margin-bottom: 30px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 30px;
+        }
+
+        .hero-overlay h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Quick Stats */
+        .stats-bar {
+            background-color: var(--light-blue);
+            padding: 25px 0;
+            margin-bottom: 40px;
+            border-radius: var(--border-radius);
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+            font-weight: 500;
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        /* Main Content Cards */
+        .content-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .content-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 18px 25px;
+            font-size: 1.1rem;
+            position: relative;
+        }
+
+        .card-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-gold);
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .founder-image {
+            flex-shrink: 0;
+            width: 150px;
+            height: 210px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .welcome-text {
+            flex-grow: 1;
+        }
+
+        /* Departments Grid */
+        .departments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .department-card {
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            text-align: center;
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .department-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-left-color: var(--accent-gold);
+        }
+
+        .department-logo {
+            height: 60px;
+            margin-bottom: 15px;
+            object-fit: contain;
+        }
+
+        /* Image Slider */
+        .image-slider {
+            position: relative;
+            height: 300px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin: 30px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .slider-images {
+            display: flex;
+            width: 400%;
+            height: 100%;
+            animation: slide 20s infinite;
+        }
+
+        .slider-image {
+            width: 25%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0%, 20% { transform: translateX(0); }
+            25%, 45% { transform: translateX(-25%); }
+            50%, 70% { transform: translateX(-50%); }
+            75%, 95% { transform: translateX(-75%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+        }
+
+        .sidebar-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .sidebar-card .card-header {
+            background-color: var(--dark-blue);
+            padding: 15px 20px;
+            font-size: 1rem;
+        }
+
+        .sidebar-card .card-content {
+            padding: 20px;
+        }
+
+        .dean-profile {
+            text-align: center;
+        }
+
+        .dean-photo {
+            width: 200px;
+            height: 250px;
+            border-radius: var(--border-radius);
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .highlights-list {
+            list-style: none;
+        }
+
+        .highlights-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--medium-gray);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .highlights-list li:last-child {
+            border-bottom: none;
+        }
+
+        .highlights-list i {
+            color: var(--accent-gold);
+            margin-top: 3px;
+        }
+
+        /* Latest News */
+        .news-section {
+            background-color: var(--light-gray);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+        }
+
+        .news-slider {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .news-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .news-item h4 {
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+        }
+
+        .news-date {
+            color: var(--dark-gray);
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Messages Section */
+        .messages-section {
+            background-color: var(--light-blue);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin: 40px 0;
+            border-left: 5px solid var(--accent-gold);
+        }
+
+        .messages-section h3 {
+            margin-bottom: 20px;
+            color: var(--dark-blue);
+        }
+
+        /* Footer */
+        .main-footer {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent-gold);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+            padding-left: 5px;
+        }
+
+        .contact-info p {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .contact-info i {
+            color: var(--accent-gold);
+            margin-top: 3px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: static;
+                margin-top: 40px;
+            }
+            
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-blue);
+                flex-direction: column;
+                box-shadow: var(--shadow-lg);
+                z-index: 1000;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+            
+            .dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background-color: rgba(0, 0, 0, 0.1);
+                margin-left: 20px;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .welcome-section {
+                flex-direction: column;
+            }
+            
+            .founder-image {
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            .logo-section {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .top-bar .container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .top-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .top-links a {
+                margin: 0;
+            }
+            
+            .hero-overlay {
+                padding: 20px;
+            }
+            
+            .hero-overlay h2 {
+                font-size: 1.5rem;
+            }
+            
+            .departments-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .card-content, .sidebar-card .card-content {
+                padding: 15px;
+            }
+            
+            .messages-section {
+                padding: 20px;
+            }
+            
+            .image-slider {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div>Faculty of Engineering | Dayalbagh Educational Institute (Deemed to be University)</div>
+            <div class="top-links">
+                <a href="/engineering/index.php/industry-interaction"><i class="fas fa-industry"></i> Industry Interaction</a>
+                <a href="/engineering/index.php/events"><i class="fas fa-calendar-alt"></i> Events</a>
+                <a href="http://www.aicte-india.org/"><i class="fas fa-university"></i> AICTE</a>
+                <a href="/dei"><i class="fas fa-home"></i> DEI Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="https://www.dei.ac.in/nsc2022/images/dei_logo.png" alt="Faculty of Engineering Logo" class="logo">
+                    <div class="institute-info">
+                        <h1>Faculty of Engineering</h1>
+                        <p>Dayalbagh Educational Institute (Deemed to be University)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="main-navigation">
+        <div class="container nav-container">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li class="active"><a href="/engineering/"><i class="fas fa-home"></i> Home</a></li>
+                
+                <li class="dropdown-parent">
+                    <a href="javascript:void(0)"><i class="fas fa-info-circle"></i> About <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/engineering/index.php/about-faculty/history">History</a>
+                        <a href="/engineering/index.php/about-faculty/strengths">Strengths</a>
+                        <a href="/engineering/index.php/about-faculty/infrastructure-labs">Infrastructure & Labs</a>
+                        <a href="https://www.dei.ac.in/dei/index.php?option=com_content&view=article&id=171&Itemid=258">Approvals</a>
+                    </div>
+                </li>
+                
+                <li class="dropdown-parent">
+                    <a href="javascript:void(0)"><i class="fas fa-graduation-cap"></i> Programmes <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/engineering/index.php/programmes/under-graduate">Under-Graduate</a>
+                        <a href="/engineering/index.php/programmes/ug-curriculum">UG Curriculum</a>
+                        <a href="/engineering/index.php/programmes/post-graduate">Post Graduate</a>
+                        <a href="/engineering/index.php/programmes/doctoral-programme">Doctoral Programme</a>
+                        <a href="/engineering/index.php/programmes/panc">Programme and Course Outcomes</a>
+                        <a href="/engineering/index.php/programmes/integrated-programme">Integrated Programme</a>
+                        <a href="/engineering/index.php/programmes/evaluation-system">Evaluation System</a>
+                        <a href="/engineering/index.php/programmes/academic-calendar">Academic Calendar</a>
+                    </div>
+                </li>
+                
+                <li class="dropdown-parent">
+                    <a href="javascript:void(0)"><i class="fas fa-building"></i> Departments <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/engineering/index.php/2012-12-08-09-16-45/electrical-engg">Electrical Engg.</a>
+                        <a href="https://footwearengg.dei.ac.in/">Footwear Technology</a>
+                        <a href="https://agriengg.dei.ac.in">Agricultural Engineering</a>
+                        <a href="/engineering/index.php/2012-12-08-09-16-45/mechanical-engg">Mechanical Engg.</a>
+                        <a href="https://civilengg.dei.ac.in/">Civil Engineering</a>
+                    </div>
+                </li>
+                
+                <li class="dropdown-parent">
+                    <a href="javascript:void(0)"><i class="fas fa-users"></i> Faculty & Staff <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="https://agriengg.dei.ac.in/index.php/faculty-staff">Agricultural Engg. Faculty</a>
+                        <a href="/engineering/index.php/2012-12-08-09-23-43/electrical-engg-faculty">Electrical Engg. Faculty</a>
+                        <a href="/engineering/index.php/2012-12-08-09-23-43/mechanical-engg-faculty">Mechanical Engg. Faculty</a>
+                        <a href="https://footwearengg.dei.ac.in/index.php/faculty-staff">Footwear Technology Faculty</a>
+                        <a href="https://civilengg.dei.ac.in/index.php/faculty-staff">Civil Engg. Faculty</a>
+                        <a href="/engineering/index.php/2012-12-08-09-23-43/core-courses-faculty">Core Courses Faculty</a>
+                        <a href="/engineering/index.php/2012-12-08-09-23-43/acheivements">Achievements</a>
+                    </div>
+                </li>
+                
+                <li class="dropdown-parent">
+                    <a href="javascript:void(0)"><i class="fas fa-briefcase"></i> Placement <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/engineering/index.php/placement/placement-cell">Placement Cell</a>
+                        <a href="https://www.dei.ac.in/dei/index.php?option=com_content&view=category&layout=blog&id=50&Itemid=287">Alumni</a>
+                    </div>
+                </li>
+                
+                <li class="dropdown-parent">
+                    <a href="javascript:void(0)"><i class="fas fa-user-graduate"></i> Students <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/engineering/index.php/students/incentives-to-students">Incentives to Students</a>
+                        <a href="/engineering/index.php/students/students-achievements">Student's Achievements</a>
+                        <a href="/engineering/index.php/students/ie-student-s-chapter">IE Student's Chapter</a>
+                    </div>
+                </li>
+                
+                <li class="dropdown-parent">
+                    <a href="javascript:void(0)"><i class="fas fa-flask"></i> Research <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <a href="/engineering/index.php/2012-12-08-09-34-06/research-areas">Research Areas</a>
+                        <a href="/engineering/index.php/2012-12-08-09-34-06/r-d-projects">R & D Projects</a>
+                        <a href="/engineering/index.php/2012-12-08-09-34-06/electrical-engg-publication">Electrical Engg. Publication</a>
+                        <a href="/engineering/index.php/2012-12-08-09-34-06/mechanical-engg-publications">Mechanical Engg. Publications</a>
+                        <a href="/engineering/index.php/2012-12-08-09-34-06/footware-tech-publications-patents">Footwear Tech. Publications</a>
+                        <a href="/engineering/index.php/2012-12-08-09-34-06/footwear-tech-patents">Footwear Tech. Patents</a>
+                        <a href="/engineering/index.php/2012-12-08-09-34-06/electrical-engg-collaborations">Electrical Engg. Collaborations</a>
+                        <a href="/engineering/index.php/2012-12-08-09-34-06/mechanical-engg-collaborations">Mechanical Engg. Collaborations</a>
+                    </div>
+                </li>
+                
+                <li><a href="/engineering/index.php/contact"><i class="fas fa-address-book"></i> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <img src="https://www.dei.ac.in/engineering/images/header.jpg" alt="Faculty of Engineering" class="hero-image">
+            <div class="hero-overlay">
+                <h2>Excellence in Engineering Education Since 1950</h2>
+                <p>Creating 'Complete Engineers' with intellectual strength, emotional maturity, and societal commitment</p>
+            </div>
+        </div>
+
+        <!-- Quick Stats -->
+        <div class="stats-bar">
+            <div class="container">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number">70+</div>
+                        <div class="stat-label">Years of Excellence</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Engineering Departments</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Placement Record</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1:2.5</div>
+                        <div class="stat-label">Faculty-Student Ratio</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content-wrapper">
+            <!-- Left Content -->
+            <div class="main-content">
+                <!-- Welcome Section -->
+                <div class="content-card">
+                    <div class="card-header">Welcome to Faculty of Engineering</div>
+                    <div class="card-content">
+                        <div class="welcome-section">
+                            <div class="founder-image">
+                                <img src="https://www.dei.ac.in/engineering/images/Mehta%20ji%20Maharaj.jpg" alt="Param Guru Huzur Mehtaji Maharaj">
+                            </div>
+                            <div class="welcome-text">
+                                <p><em>Faculty of Engineering, Dayalbagh Educational Institute, which is widely recognized as one of the most prestigious engineering institutions of India, was founded by His Holiness Param Guru Huzur Mehtaji Maharaj in 1950 as Dayalbagh Engineering College in response to the country's needs for trained technical manpower.</em></p>
+                                <p><em>It became a part of the Dayalbagh Educational Institute (Deemed University) in the year 1981. The Faculty has held aloft the beacon of knowledge, research and education in the field of engineering throughout its existence. Its innovative and comprehensive scheme of education aims at excellence but not at the cost of relevance, encourages initiative and creative work, which is inter-disciplinary and which prepares the student for the increasingly techno-oriented society of tomorrow. The mission objective of the value oriented educational system is to evolve a 'Complete Man', i.e., a well rounded person whose hallmarks are intellectual strength, emotional maturity, truthfulness, general awareness, devotion to duty, high moral character, simple living, scientific temperament and societal commitment.</em></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latest News -->
+                <div class="content-card">
+                    <div class="card-header">Latest News & Updates</div>
+                    <div class="card-content">
+                        <div class="news-section">
+                            <div class="news-slider">
+                                <div class="news-item">
+                                    <h4>Self Assessment Reports</h4>
+                                    <span class="news-date">Recent Update</span>
+                                    <p>Self Assessment Reports with CO's, PO's, PEO and PSO for Mechanical Engineering and Electrical Engineering Departments</p>
+                                    <a href="/engineering/index.php/news-test/102-self-assessment-reports">Read more <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <div class="news-item">
+                                    <h4>Lateral Entry to B.Tech. for girls</h4>
+                                    <span class="news-date">Admission Update</span>
+                                    <p>Lateral Entry to B.Tech. for girls from Diploma in Electronics Engineering stream, DEI Technical College.</p>
+                                    <a href="/engineering/index.php/news-test/22-lateral-entry-to-b-sc-engg-for-girls">Read more <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                                <div class="news-item">
+                                    <h4>New Programmes added</h4>
+                                    <span class="news-date">Academic Update</span>
+                                    <p>New programmes including B.Tech. Electrical with specialization in Electronics & Communications, Computer Science, and more.</p>
+                                    <a href="/engineering/index.php/news-test/21-newprogrammeengg">Read more <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Departments -->
+                <div class="content-card">
+                    <div class="card-header">Engineering Departments</div>
+                    <div class="card-content">
+                        <p>The Faculty has Five departments, Civil Engineering, Electrical Engineering, Footwear Technology, Mechanical Engineering and Agricultural Engineering that offer a number of programmes at the undergraduate, postgraduate and doctoral levels.</p>
+                        
+                        <div class="departments-grid">
+                            <div class="department-card">
+                                <img src="https://civilengg.dei.ac.in/images/faculty.png" alt="Civil Engineering" class="department-logo">
+                                <h4>Civil Engineering</h4>
+                                <a href="https://civilengg.dei.ac.in/">Visit Department <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                            
+                            <div class="department-card">
+                                <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Electrical Engineering" class="department-logo">
+                                <h4>Electrical Engineering</h4>
+                                <a href="/dei/engineering/index.php/2012-12-08-09-16-45/electrical-engg">Visit Department <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                            
+                            <div class="department-card">
+                                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Footwear Technology" class="department-logo">
+                                <h4>Footwear Technology</h4>
+                                <a href="https://footwearengg.dei.ac.in/">Visit Department <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                            
+                            <div class="department-card">
+                                <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mechanical Engineering" class="department-logo">
+                                <h4>Mechanical Engineering</h4>
+                                <a href="/dei/engineering/index.php/2012-12-08-09-16-45/mechanical-engg">Visit Department <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                            
+                            <div class="department-card">
+                                <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Agricultural Engineering" class="department-logo">
+                                <h4>Agricultural Engineering</h4>
+                                <a href="https://agriengg.dei.ac.in/index.php">Visit Department <i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Founder's Messages -->
+                <div class="messages-section">
+                    <h3><i class="fas fa-quote-left"></i> Immortal Messages of Param Guru Huzur Mehtaji Maharaj</h3>
+                    <p><em>"Brothers and sisters of Dayalbagh, and new young friends! I bow in gratitude before the Supreme Father at your having assembled here at the invitation of the Principal, Engineering College. Monday is regarded as an auspicious day in the Satsang circle... The utility of a college largely depends upon its workers and students. The workers should not look upon their students merely as sons of others, but should treat them like their own sons and devote themselves wholeheartedly to their betterment. The students in their turn should have proper regard and respect for their teachers, act according to their instructions and take full advantage of their knowledge and experience."</em></p>
+                    <p><strong>— Param Guru Huzur Mehtaji Maharaj, Founder of Faculty of Engineering</strong></p>
+                </div>
+
+                <!-- Image Slider -->
+                <div class="image-slider">
+                    <div class="slider-images">
+                        <img src="https://www.dei.ac.in/engineering/images/slides/1EnggDay.jpg" alt="Engineering Day" class="slider-image">
+                        <img src="https://www.dei.ac.in/engineering/images/slides/3PrizeDist.jpg" alt="Prize Distribution" class="slider-image">
+                        <img src="https://www.dei.ac.in/engineering/images/slides/building.jpg" alt="Symposium" class="slider-image">
+                        <img src="https://www.dei.ac.in/engineering/images/slides/4Sym.jpg" alt="Engineering Building" class="slider-image">
+                    </div>
+                </div>
+
+                <!-- Additional Messages -->
+                <div class="content-card">
+                    <div class="card-header">Founder's Wisdom</div>
+                    <div class="card-content">
+                        <p><em>"Be an early riser and be economical, industrious, truthful, kind and considerate, a good citizen and a true Bhakta of Huzur Radhasoami Dayal."</em></p>
+                        <p><em>"If you want to eat you must sweat first. If you want self-government you must learn to govern yourself first. If you want to deserve anything you must learn to serve others."</em></p>
+                        <p><em>"Waste nothing has been an important principle of my life. I have always advised men and women, young and old alike, to see that they do not waste their time, energy, thought, wealth, food, clothing, in short anything by possess lest they find themselves in want of them at the time of need. I also consider waste as nothing short of sin."</em></p>
+                        <p><em>"A community which wishes to go ahead with its work must remain united in purpose, thought and action."</em></p>
+                    </div>
+                </div>
+
+                <!-- Placement Cell -->
+                <div class="content-card">
+                    <div class="card-header">Training & Placement Cell</div>
+                    <div class="card-content">
+                        <p>The Faculty Training and Placement Cell (FTPC) co-ordinates with various industries and organizations for Summer Training, Five Months Cooperative Education Program with Industries (Internship) apart from Campus Recruitment.</p>
+                        <p>FTPC comprises several faculty members and a group of dynamic Student Representatives from various classes to assist the training and placement officer.</p>
+                        <p>It also coordinates with the placement cell of the DEI Technical College for placement of diploma students and various Alumni associations of DEI.</p>
+                        
+                        <h5>TOP RECRUITERS</h5>
+                        <div style="margin-top: 20px; padding: 15px; background-color: var(--light-gray); border-radius: var(--border-radius);">
+                            <p style="text-align: center; font-style: italic;">Leading national and international companies regularly recruit our graduates</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="sidebar">
+                <!-- Director Profile -->
+                <div class="sidebar-card">
+                    <div class="card-header">Director - Prof. C Patvardhan</div>
+                    <div class="card-content">
+                        <p class="blubox-jck">The rapidly changing technological scenario around the world requires us to continuously and tirelessly strive to maintain pace with these changes.</p>
+                        <hr style="margin: 15px 0;">
+                        <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <a href="/engineering/files/Dean Engineering.pdf"><i class="fas fa-file-pdf"></i> Faculty Profile</a>
+                            <a href="https://civilengg.dei.ac.in/files/brochure1.pdf"><i class="fas fa-file-pdf"></i> Department of Civil Engineering Profile</a>
+                            <a href="/engineering/files/Electrical Engineering 03_oct_2017.pdf"><i class="fas fa-file-pdf"></i> Department of Electrical Engineering Profile</a>
+                            <a href="https://footwearengg.dei.ac.in/files/DepartmentofFootwearTechnology.pdf"><i class="fas fa-file-pdf"></i> Department of Footwear Technology Profile</a>
+                            <a href="/engineering/files/Mechanical Engineering 3-10-2017.pdf"><i class="fas fa-file-pdf"></i> Department of Mechanical Engineering Profile</a>
+                            <a href="/engineering/files/Skill Development Courses October 2017 .pdf"><i class="fas fa-file-pdf"></i> Skill Development Profile</a>
+                            <a href="/engineering/files/Renewable Energy Initiatives.pdf"><i class="fas fa-file-pdf"></i> Renewable Energy Department Profile</a>
+                        </div>
+                        
+                        <h5 style="margin-top: 20px;">Self Assessment Reports</h5>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li><a href="https://www.dei.ac.in/dei/files/NBA/SAR%20Electrical%20Engineering.pdf">SAR - Electrical Engineering</a></li>
+                            <li><a href="https://www.dei.ac.in/dei/files/NBA/SAR%20Mechanical%20Engineering.pdf">SAR - Mechanical Engineering</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Dean Profile -->
+                <div class="sidebar-card">
+                    <div class="card-header">Dean - Prof. Devendra Kumar Chaturvedi</div>
+                    <div class="card-content dean-profile">
+                        <img src="https://www.dei.ac.in/engineering/images/aboutFaculty/Prof.%20DKC.jpg" alt="Prof. Devendra Kumar Chaturvedi" class="dean-photo">
+                        <div style="text-align: left;">
+                            <p><strong>Educational Qualification:</strong> B.E., M.Tech. (Engg. Systems and Management), Ph.D., Post Doc. (Univ. of Calgary, Canada)</p>
+                            <p><strong>Area of Specialization:</strong> Smart EVA shoes, Orthopaedics Shoes, AI in footwear industry, Soft Computing, Modeling and Simulation of systems, Human Consciousness.</p>
+                            <hr style="margin: 15px 0;">
+                            <p><strong>CONTACT:</strong><br>
+                            Department of Footwear Technology<br>
+                            Faculty of Engineering<br>
+                            Dayalbagh Educational Institute<br>
+                            Dayalbagh, Agra 282 005 (UP), India<br>
+                            <strong>Tel:</strong> +91-9456-433-788<br>
+                            <strong>Email:</strong> dkc.foe@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Highlights -->
+                <div class="sidebar-card">
+                    <div class="card-header">Faculty Highlights</div>
+                    <div class="card-content">
+                        <ul class="highlights-list">
+                            <li><i class="fas fa-check-circle"></i> Recognized by AICTE and UGC. Government funded.</li>
+                            <li><i class="fas fa-check-circle"></i> Low fee structure</li>
+                            <li><i class="fas fa-check-circle"></i> No Capitation Fee</li>
+                            <li><i class="fas fa-check-circle"></i> High staff to student ratio (1:2.5)</li>
+                            <li><i class="fas fa-check-circle"></i> Highly qualified, experienced and dedicated Faculty</li>
+                            <li><i class="fas fa-check-circle"></i> Excellent performance in GATE every year</li>
+                            <li><i class="fas fa-check-circle"></i> Nearly 100% student placement</li>
+                            <li><i class="fas fa-check-circle"></i> Several R&D projects sponsored by AICTE, DST, UGC</li>
+                            <li><i class="fas fa-check-circle"></i> International Collaboration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/engineering/index.php/industry-interaction"><i class="fas fa-arrow-right"></i> Industry Interaction</a></li>
+                        <li><a href="/engineering/index.php/events"><i class="fas fa-arrow-right"></i> Events</a></li>
+                        <li><a href="http://www.aicte-india.org/"><i class="fas fa-arrow-right"></i> AICTE</a></li>
+                        <li><a href="/dei"><i class="fas fa-arrow-right"></i> DEI Home</a></li>
+                        <li><a href="/engineering/index.php/contact"><i class="fas fa-arrow-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Departments</h4>
+                    <ul class="footer-links">
+                        <li><a href="/engineering/index.php/2012-12-08-09-16-45/electrical-engg"><i class="fas fa-arrow-right"></i> Electrical Engineering</a></li>
+                        <li><a href="https://footwearengg.dei.ac.in/"><i class="fas fa-arrow-right"></i> Footwear Technology</a></li>
+                        <li><a href="https://agriengg.dei.ac.in"><i class="fas fa-arrow-right"></i> Agricultural Engineering</a></li>
+                        <li><a href="/engineering/index.php/2012-12-08-09-16-45/mechanical-engg"><i class="fas fa-arrow-right"></i> Mechanical Engineering</a></li>
+                        <li><a href="https://civilengg.dei.ac.in/"><i class="fas fa-arrow-right"></i> Civil Engineering</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Faculty of Engineering<br>Dayalbagh Educational Institute<br>Dayalbagh, Agra - 282005, India</p>
+                        <p><i class="fas fa-phone"></i> Phone: +91-562-2801545</p>
+                        <p><i class="fas fa-envelope"></i> Email: admin@dei.ac.in</p>
+                        <p><i class="fas fa-globe"></i> Website: www.dei.ac.in/engineering</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>Copyright © Dayalbagh Educational Institute (Deemed to be University) | Faculty of Engineering</p>
+                <p>Founded in 1950 | NAAC A+ Accredited Institution</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!navMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+        
+        // News slider functionality
+        let currentNewsIndex = 0;
+        const newsItems = document.querySelectorAll('.news-item');
+        
+        function showNextNews() {
+            newsItems[currentNewsIndex].style.display = 'none';
+            currentNewsIndex = (currentNewsIndex + 1) % newsItems.length;
+            newsItems[currentNewsIndex].style.display = 'block';
+        }
+        
+        // Initialize news slider
+        if (newsItems.length > 0) {
+            // Hide all news items except first
+            for (let i = 1; i < newsItems.length; i++) {
+                newsItems[i].style.display = 'none';
+            }
+            
+            // Auto-rotate news every 5 seconds
+            setInterval(showNextNews, 5000);
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Dropdown menu enhancement for mobile
+        const dropdownParents = document.querySelectorAll('.dropdown-parent');
+        
+        dropdownParents.forEach(parent => {
+            if (window.innerWidth <= 992) {
+                parent.addEventListener('click', (e) => {
+                    if (!e.target.classList.contains('dropdown')) {
+                        e.preventDefault();
+                        const dropdown = parent.querySelector('.dropdown');
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                });
+            }
+        });
+        
+        // Update stats on scroll (animation effect)
+        window.addEventListener('scroll', () => {
+            const statsBar = document.querySelector('.stats-bar');
+            if (statsBar) {
+                const rect = statsBar.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    statsBar.style.opacity = '1';
+                    statsBar.style.transform = 'translateY(0)';
+                }
+            }
+        });
+        
+        // Initialize stats bar animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const statsBar = document.querySelector('.stats-bar');
+            if (statsBar) {
+                statsBar.style.opacity = '0';
+                statsBar.style.transform = 'translateY(20px)';
+                statsBar.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                setTimeout(() => {
+                    statsBar.style.opacity = '1';
+                    statsBar.style.transform = 'translateY(0)';
+                }, 300);
+            }
+        });
+    </script>
+</body>
+</html>

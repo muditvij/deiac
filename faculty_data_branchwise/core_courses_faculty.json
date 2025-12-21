@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Dr. Surat Kumar",
+        "qualification": "M. Sc. (Chemistry), Ph.D.",
+        "course": "Chemistry"
+    },
+    {
+        "name": "Dr. R. Kumar",
+        "qualification": "M. Sc. (Maths), Ph.D.",
+        "course": "Mathematics"
+    },
+    {
+        "name": "Dr. S. P. Singh",
+        "qualification": "M. Sc. (Mathematics), Ph.D.",
+        "course": "Mathematics"
+    },
+    {
+        "name": "Dr. A. P. Tyagi",
+        "qualification": "M. Sc. (Mathematics), Ph.D.",
+        "course": "Mathematics"
+    },
+    {
+        "name": "Dr. S. Sharma",
+        "qualification": "M. Sc. (Mathematics), Ph.D.",
+        "course": "Applied Mathematics"
+    },
+    {
+        "name": "Dr. J. K. Verma",
+        "qualification": "M. A. (English), Ph.D.",
+        "course": "English"
+    },
+    {
+        "name": "Dr. G. Kumar",
+        "qualification": "M.A., Ph.D.",
+        "course": "Arts Appreciation"
+    },
+    {
+        "name": "Dr. G. Mathur",
+        "qualification": "M. Sc., Ph.D.",
+        "course": "Household Management"
+    },
+    {
+        "name": "Dr. P. Jain",
+        "qualification": "M.A., M. Phil., Ph.D.",
+        "course": "Sociology"
+    }
+]
