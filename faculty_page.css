@@ -34,7 +34,12 @@ body {
     background-color: #fff;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     color: var(--dark-blue);
@@ -132,25 +137,32 @@ a:hover {
 .nav-menu {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
 }
 
-.nav-menu > li {
+.nav-menu>li {
     position: relative;
 }
 
-.nav-menu > li > a {
-    display: block;
-    padding: 16px 20px;
+.nav-menu>li>a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 12px;
     color: white;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    line-height: 1;
 }
 
-.nav-menu > li:hover > a {
+.nav-menu>li:hover>a {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.nav-menu > li.active > a {
+.nav-menu>li.active>a {
     background-color: var(--accent-gold);
     color: var(--dark-blue);
 }
@@ -172,7 +184,7 @@ a:hover {
     overflow: hidden;
 }
 
-.nav-menu > li:hover .dropdown {
+.nav-menu>li:hover .dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -301,6 +313,12 @@ a:hover {
     min-height: 100px;
 }
 
+.faculty-card-header .faculty-name,
+.faculty-card-header .faculty-designation,
+.faculty-card-header p {
+    color: white !important;
+}
+
 .faculty-card-header::after {
     content: '';
     position: absolute;
@@ -321,6 +339,7 @@ a:hover {
     top: 20px;
     right: 20px;
     box-shadow: var(--shadow-sm);
+    z-index: 10;
 }
 
 .placeholder-image {
@@ -336,6 +355,7 @@ a:hover {
     top: 20px;
     right: 20px;
     box-shadow: var(--shadow-sm);
+    z-index: 10;
 }
 
 .placeholder-image i {
@@ -558,12 +578,12 @@ a:hover {
     .faculty-container {
         grid-template-columns: 1fr;
     }
-    
+
     .sidebar {
         position: static;
         margin-top: 40px;
     }
-    
+
     .nav-menu {
         display: none;
         position: absolute;
@@ -575,11 +595,11 @@ a:hover {
         box-shadow: var(--shadow-lg);
         z-index: 1000;
     }
-    
+
     .nav-menu.active {
         display: flex;
     }
-    
+
     .dropdown {
         position: static;
         opacity: 1;
@@ -589,7 +609,7 @@ a:hover {
         background-color: rgba(0, 0, 0, 0.1);
         margin-left: 20px;
     }
-    
+
     .mobile-menu-btn {
         display: block;
     }
@@ -601,33 +621,33 @@ a:hover {
         text-align: center;
         gap: 15px;
     }
-    
+
     .logo-section {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .top-bar .container {
         flex-direction: column;
         gap: 10px;
         text-align: center;
     }
-    
+
     .top-links {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
     }
-    
+
     .top-links a {
         margin: 0;
     }
-    
+
     .faculty-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .page-header h1 {
         font-size: 1.8rem;
     }
@@ -637,20 +657,22 @@ a:hover {
     .container {
         padding: 0 15px;
     }
-    
+
     .faculty-card-header {
         min-height: 120px;
     }
-    
-    .faculty-image, .placeholder-image {
+
+    .faculty-image,
+    .placeholder-image {
         width: 80px;
         height: 100px;
     }
-    
-    .faculty-name, .faculty-designation {
+
+    .faculty-name,
+    .faculty-designation {
         max-width: calc(100% - 100px);
     }
-    
+
     .filter-options {
         justify-content: center;
     }

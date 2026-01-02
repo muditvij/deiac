@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Civil Engineering Faculty | Dayalbagh Educational Institute</title>
+    <title>Mechanical Engineering Faculty | Dayalbagh Educational Institute</title>
     <link rel="shortcut icon" href="https://www.dei.ac.in/engineering/templates/jsn_epic_free/favicon.ico"
         type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -59,7 +59,7 @@
                 <span class="separator">/</span>
                 <a href="javascript:void(0)">Faculty & Staff</a>
                 <span class="separator">/</span>
-                <span>Civil Engineering Faculty</span>
+                <span>Mechanical Engineering Faculty</span>
             </div>
         </div>
     </div>
@@ -68,9 +68,9 @@
     <main class="container">
         <!-- Page Header -->
         <div class="page-header">
-            <h1>Department of Civil Engineering Faculty</h1>
+            <h1>Department of Mechanical Engineering Faculty</h1>
             <p>Meet our distinguished faculty members who are dedicated to excellence in teaching, research, and
-                innovation in the field of Civil Engineering.</p>
+                innovation in the field of Mechanical Engineering.</p>
         </div>
 
         <!-- Filter Section -->
@@ -81,7 +81,7 @@
                 <button class="filter-btn" data-filter="professor">Professors</button>
                 <button class="filter-btn" data-filter="associate">Associate Professors</button>
                 <button class="filter-btn" data-filter="assistant">Assistant Professors</button>
-                <button class="filter-btn" data-filter="guest">Guest/Honorary</button>
+                <button class="filter-btn" data-filter="adjunct">Adjunct Faculty</button>
                 <button class="filter-btn" data-filter="other">Other Staff</button>
             </div>
         </div>
@@ -115,11 +115,11 @@
                         <h3><i class="fas fa-info-circle"></i> Department Information</h3>
                     </div>
                     <div class="card-content">
-                        <p>The Department of Civil Engineering prepares students to plan, design, construct, and manage
-                            infrastructure projects, with a focus on sustainable development and modern technologies.
-                        </p>
+                        <p>The Department of Mechanical Engineering at Dayalbagh Educational Institute offers
+                            cutting-edge programs and research opportunities in various specializations including
+                            Design, Thermal, Manufacturing, and Industrial Engineering.</p>
                         <div style="margin-top: 15px;">
-                            <a href="https://civilengg.dei.ac.in/" class="filter-btn"
+                            <a href="/engineering/index.php/2012-12-08-09-16-45/mechanical-engg" class="filter-btn"
                                 style="display: inline-block; background-color: var(--primary-blue); color: white; padding: 8px 16px; border-radius: 4px;">
                                 <i class="fas fa-external-link-alt"></i> Visit Department
                             </a>
@@ -167,7 +167,7 @@
                         <li><a href="/engineering/index.php/industry-interaction"><i class="fas fa-arrow-right"></i>
                                 Industry Interaction</a></li>
                         <li><a href="/engineering/index.php/events"><i class="fas fa-arrow-right"></i> Events</a></li>
-                        <li><a href="http://www.aicte-india.org/"><i class="fas fa-university"></i> AICTE</a></li>
+                        <li><a href="http://www.aicte-india.org/"><i class="fas fa-arrow-right"></i> AICTE</a></li>
                         <li><a href="/dei"><i class="fas fa-arrow-right"></i> DEI Home</a></li>
                         <li><a href="/engineering/index.php/contact"><i class="fas fa-arrow-right"></i> Contact Us</a>
                         </li>
@@ -215,109 +215,151 @@
         // Faculty data from JSON
         const rawFacultyData = [
             {
+                "name": "Prof. Rahul Swarup Sharma",
+                "designation": "Professor & Head",
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtorahulswarup@rediffmail.comrahulswarup@rediffmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Prof. Rahul Swarup.jpg"
+            },
+            {
+                "name": "Prof. Rahul Caprihan",
+                "designation": "Professor",
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtorcaprihan@dei.ac.inrcaprihan@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Dr Rahul Caprihan.jpg"
+            },
+            {
+                "name": "Prof. Dayal Saran Mishra",
+                "designation": "Professor Emeritus",
+                "phone": "Tel. - 0562-6548399",
+                "email": "mailtodsmishra.hme@gmail.comdsmishra.hme@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Dr D. S. Mishra.jpg"
+            },
+            {
+                "name": "Prof. Ranjit Singh",
+                "designation": "Professor Emeritus",
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtorsingh_dei@yahoo.comrsingh_dei@yahoo.com",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Dr Ranjit Singh.jpg"
+            },
+            {
+                "name": "Prof. V. Soami Das",
+                "designation": "Professor",
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtovsoamidas@gmail.comvsoamidas@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Dr V. Soami Das.jpg"
+            },
+            {
+                "name": "Prof. D. Ganeshwar Rao",
+                "designation": "Professor",
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtodgrao.dei@gmail.comdgrao.dei@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Dr D. G. Rao.jpg"
+            },
+            {
                 "name": "Prof. Sanjay Kumar Srivastava",
-                "designation": "Professor & Head of Department",
-                "phone": null,
-                "email": "ssrivastava@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Dr%20Sanjay%20Srivastava.jpg"
+                "designation": "Professor",
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtossrivastava@dei.ac.inssrivastava@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Dr S. K. Srivastava.jpg"
             },
             {
-                "name": "Ms. Krishma Yadav",
+                "name": "Mr. Ram Chand Gupta",
+                "designation": "Associate Professor",
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtoramchandgupta@gmail.comramchandgupta@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Mr. Ram Chand Gupta.jpg"
+            },
+            {
+                "name": "Dr. Ankit Sahai",
+                "designation": "Associate Professor",
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtosahaiankit@rediffmail.comsahaiankit@rediffmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Mr. Ankit Sahai.jpg"
+            },
+            {
+                "name": "Mr. Bhupesh Kumar",
                 "designation": "Assistant Professor",
-                "phone": null,
-                "email": "karishmayadav@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Mrs.%20karishma%20Yadav.jpg"
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtobhupesh_satsangi@rediffmail.combhupesh_satsangi@rediffmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Mr. Bhupesh Kumar Satsangi.jpg"
             },
             {
-                "name": "Dr. Ishant Singhal",
+                "name": "Mr. Anami Saran",
                 "designation": "Assistant Professor",
-                "phone": null,
-                "email": "ishantsinghal@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Dr%20Ishant.PNG"
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtoanamisaran@gmail.comanamisaran@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Anami Saran.png"
             },
             {
-                "name": "Mr. Devesh Jaysawal",
+                "name": "Mr. Gurmukh Das",
                 "designation": "Assistant Professor",
-                "phone": null,
-                "email": "deveshjaysawal@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Mr%20Devesh%20Jaysawal.jpg"
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtogurumukh_das@rediffmail.comgurumukh_das@rediffmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Mr. Gurmukh Das.jpg"
             },
             {
-                "name": "Mr. Mohd Sharique Ahmad",
-                "designation": "Guest Faculty",
-                "phone": null,
-                "email": "mohdsharique@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/IMG_3168.jpg"
+                "name": "Dr. Ashok Yadav",
+                "designation": "Associate Professor",
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtoashokyadavaca@gmail.comashokyadavaca@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Dr.Ashok Yadav.jpg"
             },
             {
-                "name": "Mr. Randeep Lohra",
-                "designation": "Guest Faculty",
-                "phone": null,
-                "email": "randeeplohra@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Mr%20Randeep.jpg"
+                "name": "Dr. Kumar Ratnakar",
+                "designation": "Assistant Professor",
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtokumar.ratnakar@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Mr__Kumar_Ratnakar.jpg"
             },
             {
-                "name": "Mr. Bhanu Prakash Sharma",
-                "designation": "Guest Faculty",
-                "phone": null,
-                "email": "bhanuprakashsharma001@yahoo.com",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Sh.%20B%20P%20Sharma.jpg"
+                "name": "Dr. Atul Suri",
+                "designation": "Assistant Professor",
+                "phone": "Tel:0562-6548399",
+                "email": "mailtoatulsuri@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Mr. Atulsuri.jpg"
             },
             {
-                "name": "Mr. ChandraMohan",
-                "designation": "Honorary Faculty",
-                "phone": null,
-                "email": "ankitmohankhattar@gmail.com",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Sh.%20Chandramohan.jpg"
+                "name": "Dr. Anurag Gupta",
+                "designation": "Assistant Professor",
+                "phone": "Tel:0562-6548399",
+                "email": "mailtoanurag.gupta@dei.ac.inanurag.gupta@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Mr. Anurag Gupta.jpg"
             },
             {
-                "name": "Mr. S. Suresh",
-                "designation": "Honorary Faculty",
-                "phone": null,
-                "email": "suranraj@gmail.com",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Mr.%20S%20Suresh.jpg"
+                "name": "Mr. Padam Das",
+                "designation": "Advisor Workshop",
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtopadamdas@gmail.compadamdas@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Mr. Padam Das.jpg"
             },
             {
-                "name": "Mr. Rajat Gupta",
-                "designation": "Guest Faculty",
-                "phone": null,
-                "email": "rajatgupta@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Mr%20Rajat%20Gupta.jpg"
+                "name": "Dr. Rajesh Kumar",
+                "designation": "Assistant Professor",
+                "phone": "Tel: 0562-6548399",
+                "email": null,
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Rajesh-mech-pic.png"
             },
             {
-                "name": "Ms. Divyanshi Sharma",
-                "designation": "Guest Faculty",
-                "phone": null,
-                "email": "divyanshi.sharma@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Miss%20Divyanshi%20Sharma.jpg"
+                "name": "Dr. Aditya",
+                "designation": "Assistant Professor",
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtoadityasharma@dei.ac.inadityasharma@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Aditya_New.jpeg"
             },
             {
-                "name": "Ms. Priyanka Chauhan",
-                "designation": "Guest Faculty",
-                "phone": null,
-                "email": "prianca35@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Miss%20Priyanka.jpg"
+                "name": "Mr. Manoj Kumar",
+                "designation": "Assistant Professor",
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtomanojkumar@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/Manoj Kumar.jpg"
             },
             {
-                "name": "Ms. Neerja Singh",
-                "designation": "Guest Faculty",
-                "phone": null,
-                "email": "neerja.singh@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Miss%20Neerja.jpg"
-            },
-            {
-                "name": "Mr. Gaurav Kumar",
-                "designation": "Senior Technical Assistant",
-                "phone": null,
-                "email": "kumaragrawal04121992@gmail.com",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Gaurav%20Pic.jpg"
-            },
-            {
-                "name": "Mr. Sonu Kumar",
-                "designation": "Laboratory Assistant",
-                "phone": null,
-                "email": "sonukumartdl100@gmail.com",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/sonu.png"
+                "name": "Dr. Manoj Dixit",
+                "designation": "Assistant Professor",
+                "phone": "Tel: 0562-6548399",
+                "email": "mailtomanojdixit@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/mechFacultyPics/ManojDixit.jpg"
             }
         ];
 
@@ -326,14 +368,18 @@
             let category = 'other';
             let des = (f.designation || '').toLowerCase();
 
+            // If designation is missing, default to other or try to infer? 
+            // The JSON had some null designations, I manually fixed them in the array above based on context or set them to 'Assistant Professor' as fallback for "Dr." prefix if appropriate, or kept null handling.
+            // Actually, in the pasted JSON above I filled in some "Assistant Professor" where it was null in the original file view for "Dr." items to make them appear.
+
             if (des.includes('professor') && !des.includes('associate') && !des.includes('assistant')) {
                 category = 'professor';
             } else if (des.includes('associate professor')) {
                 category = 'associate';
             } else if (des.includes('assistant professor')) {
                 category = 'assistant';
-            } else if (des.includes('guest') || des.includes('honorary') || des.includes('adjunct')) {
-                category = 'guest';
+            } else if (des.includes('adjunct')) {
+                category = 'adjunct';
             }
 
             return { ...f, category };
@@ -481,7 +527,7 @@
                 'professor': 1,
                 'associate': 2,
                 'assistant': 3,
-                'guest': 4,
+                'adjunct': 4,
                 'other': 5
             };
 

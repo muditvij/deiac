@@ -1,677 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electrical Engineering Faculty | Dayalbagh Educational Institute</title>
-    <link rel="shortcut icon" href="https://www.dei.ac.in/engineering/templates/jsn_epic_free/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://www.dei.ac.in/engineering/templates/jsn_epic_free/favicon.ico"
+        type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="faculty_page.css">
     <style>
-        :root {
-            --primary-blue: #0056b3;
-            --secondary-blue: #1a73e8;
-            --accent-gold: #d4af37;
-            --dark-blue: #003366;
-            --light-blue: #e8f4f8;
-            --light-gray: #f8f9fa;
-            --medium-gray: #e9ecef;
-            --dark-gray: #6c757d;
-            --text-dark: #2c3e50;
-            --text-light: #5a6c7d;
-            --success: #28a745;
-            --danger: #dc3545;
-            --warning: #ffc107;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
-            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
-            --transition: all 0.3s ease;
-            --border-radius: 8px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: #fff;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            color: var(--dark-blue);
-        }
-
-        a {
-            text-decoration: none;
-            color: var(--primary-blue);
-            transition: var(--transition);
-        }
-
-        a:hover {
-            color: var(--accent-gold);
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Styles */
-        .top-bar {
-            background-color: var(--dark-blue);
-            color: white;
-            padding: 8px 0;
-            font-size: 0.85rem;
-        }
-
-        .top-bar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .top-links a {
-            color: white;
-            margin-left: 20px;
-        }
-
-        .top-links a:hover {
-            color: var(--accent-gold);
-        }
-
-        .main-header {
-            padding: 20px 0;
-            background-color: white;
-            box-shadow: var(--shadow-sm);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .logo {
-            height: 80px;
-        }
-
-        .institute-info h1 {
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-            line-height: 1.2;
-        }
-
-        .institute-info p {
-            color: var(--dark-gray);
-            font-size: 1rem;
-        }
-
-        /* Navigation */
-        .main-navigation {
-            background-color: var(--primary-blue);
-            position: relative;
-            z-index: 999;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-menu > li {
-            position: relative;
-        }
-
-        .nav-menu > li > a {
-            display: block;
-            padding: 16px 20px;
-            color: white;
-            font-weight: 500;
-            font-size: 0.95rem;
-        }
-
-        .nav-menu > li:hover > a {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-menu > li.active > a {
-            background-color: var(--accent-gold);
-            color: var(--dark-blue);
-        }
-
-        /* Dropdown */
-        .dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: white;
-            min-width: 220px;
-            box-shadow: var(--shadow-lg);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: var(--transition);
-            z-index: 1000;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-        }
-
-        .nav-menu > li:hover .dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown a {
-            display: block;
-            padding: 12px 20px;
-            color: var(--text-dark);
-            border-bottom: 1px solid var(--medium-gray);
-        }
-
-        .dropdown a:hover {
-            background-color: var(--light-blue);
-            color: var(--primary-blue);
-        }
-
-        .dropdown a:last-child {
-            border-bottom: none;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        /* Breadcrumb */
-        .breadcrumb {
-            background-color: var(--light-gray);
-            padding: 15px 0;
-            margin-bottom: 30px;
-            border-radius: var(--border-radius);
-        }
-
-        .breadcrumb-links {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .breadcrumb-links a {
-            color: var(--dark-gray);
-        }
-
-        .breadcrumb-links a:hover {
-            color: var(--primary-blue);
-        }
-
-        .breadcrumb-links .separator {
-            color: var(--dark-gray);
-        }
-
-        /* Page Header */
-        .page-header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid var(--medium-gray);
-        }
-
-        .page-header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .page-header h1::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--accent-gold);
-        }
-
-        .page-header p {
-            color: var(--dark-gray);
-            max-width: 800px;
-            margin: 20px auto 0;
-        }
-
-        /* Faculty Cards Layout */
-        .faculty-container {
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        /* Faculty Cards Grid */
-        .faculty-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        /* Faculty Card */
-        .faculty-card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .faculty-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .faculty-card-header {
-            background-color: var(--primary-blue);
-            color: white;
-            padding: 20px;
-            position: relative;
-            min-height: 100px;
-        }
-
-        .faculty-card-header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: var(--accent-gold);
-        }
-
-        .faculty-image {
-            width: 100px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 4px;
-            border: 3px solid white;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .placeholder-image {
-            width: 100px;
-            height: 120px;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 4px;
-            border: 3px solid white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .placeholder-image i {
-            font-size: 2rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .faculty-name {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-            max-width: calc(100% - 120px);
-        }
-
-        .faculty-designation {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            max-width: calc(100% - 120px);
-        }
-
-        .faculty-card-content {
-            padding: 20px;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .contact-item i {
-            color: var(--accent-gold);
-            margin-top: 2px;
-            width: 20px;
-            text-align: center;
-        }
-
-        /* Filter Section */
-        .filter-section {
-            background-color: white;
-            padding: 20px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-sm);
-            margin-bottom: 30px;
-        }
-
-        .filter-options {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .filter-btn {
-            padding: 8px 16px;
-            background-color: var(--light-gray);
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
-
-        .filter-btn:hover {
-            background-color: var(--medium-gray);
-        }
-
-        .filter-btn.active {
-            background-color: var(--primary-blue);
-            color: white;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            position: sticky;
-            top: 120px;
-            height: fit-content;
-        }
-
-        .sidebar-card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            margin-bottom: 25px;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .sidebar-card .card-header {
-            background-color: var(--dark-blue);
-            color: white;
-            padding: 15px 20px;
-            font-size: 1rem;
-            position: relative;
-        }
-
-        .sidebar-card .card-header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--accent-gold);
-        }
-
-        .sidebar-card .card-content {
-            padding: 20px;
-        }
-
-        .related-links {
-            list-style: none;
-        }
-
-        .related-links li {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--medium-gray);
-        }
-
-        .related-links li:last-child {
-            border-bottom: none;
-        }
-
-        .related-links a {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: var(--text-dark);
-        }
-
-        .related-links a:hover {
-            color: var(--primary-blue);
-            padding-left: 5px;
-        }
-
-        .related-links i {
-            color: var(--accent-gold);
-            font-size: 0.8rem;
-        }
-
-        /* Footer */
-        .main-footer {
-            background-color: var(--dark-blue);
-            color: white;
-            padding: 40px 0 20px;
-            margin-top: 50px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-section h4 {
-            color: white;
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-section h4::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--accent-gold);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-gold);
-            padding-left: 5px;
-        }
-
-        .contact-info p {
-            margin-bottom: 12px;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .contact-info i {
-            color: var(--accent-gold);
-            margin-top: 3px;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .faculty-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .sidebar {
-                position: static;
-                margin-top: 40px;
-            }
-            
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary-blue);
-                flex-direction: column;
-                box-shadow: var(--shadow-lg);
-                z-index: 1000;
-            }
-            
-            .nav-menu.active {
-                display: flex;
-            }
-            
-            .dropdown {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                box-shadow: none;
-                background-color: rgba(0, 0, 0, 0.1);
-                margin-left: 20px;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 15px;
-            }
-            
-            .logo-section {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .top-bar .container {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-            
-            .top-links {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-            }
-            
-            .top-links a {
-                margin: 0;
-            }
-            
-            .faculty-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .page-header h1 {
-                font-size: 1.8rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .container {
-                padding: 0 15px;
-            }
-            
-            .faculty-card-header {
-                min-height: 120px;
-            }
-            
-            .faculty-image, .placeholder-image {
-                width: 80px;
-                height: 100px;
-            }
-            
-            .faculty-name, .faculty-designation {
-                max-width: calc(100% - 100px);
-            }
-            
-            .filter-options {
-                justify-content: center;
-            }
-        }
+        /* Any page-specific overrides can go here */
     </style>
 </head>
+
 <body>
     <!-- Top Bar -->
     <div class="top-bar">
         <div class="container">
             <div>Faculty of Engineering | Dayalbagh Educational Institute (Deemed to be University)</div>
             <div class="top-links">
-                <a href="/engineering/index.php/industry-interaction"><i class="fas fa-industry"></i> Industry Interaction</a>
+                <a href="/engineering/index.php/industry-interaction"><i class="fas fa-industry"></i> Industry
+                    Interaction</a>
                 <a href="/engineering/index.php/events"><i class="fas fa-calendar-alt"></i> Events</a>
                 <a href="http://www.aicte-india.org/"><i class="fas fa-university"></i> AICTE</a>
                 <a href="/dei"><i class="fas fa-home"></i> DEI Home</a>
@@ -684,7 +37,8 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <img src="https://www.dei.ac.in/nsc2022/images/dei_logo.png" alt="Faculty of Engineering Logo" class="logo">
+                    <img src="https://www.dei.ac.in/nsc2022/images/dei_logo.png" alt="Faculty of Engineering Logo"
+                        class="logo">
                     <div class="institute-info">
                         <h1>Faculty of Engineering</h1>
                         <p>Dayalbagh Educational Institute (Deemed to be University)</p>
@@ -694,98 +48,8 @@
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav class="main-navigation">
-        <div class="container nav-container">
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="/engineering/"><i class="fas fa-home"></i> Home</a></li>
-                
-                <li class="dropdown-parent">
-                    <a href="javascript:void(0)"><i class="fas fa-info-circle"></i> About <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="/engineering/index.php/about-faculty/history">History</a>
-                        <a href="/engineering/index.php/about-faculty/strengths">Strengths</a>
-                        <a href="/engineering/index.php/about-faculty/infrastructure-labs">Infrastructure & Labs</a>
-                        <a href="https://www.dei.ac.in/dei/index.php?option=com_content&view=article&id=171&Itemid=258">Approvals</a>
-                    </div>
-                </li>
-                
-                <li class="dropdown-parent">
-                    <a href="javascript:void(0)"><i class="fas fa-graduation-cap"></i> Programmes <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="/engineering/index.php/programmes/under-graduate">Under-Graduate</a>
-                        <a href="/engineering/index.php/programmes/ug-curriculum">UG Curriculum</a>
-                        <a href="/engineering/index.php/programmes/post-graduate">Post Graduate</a>
-                        <a href="/engineering/index.php/programmes/doctoral-programme">Doctoral Programme</a>
-                        <a href="/engineering/index.php/programmes/panc">Programme and Course Outcomes</a>
-                        <a href="/engineering/index.php/programmes/integrated-programme">Integrated Programme</a>
-                        <a href="/engineering/index.php/programmes/evaluation-system">Evaluation System</a>
-                        <a href="/engineering/index.php/programmes/academic-calendar">Academic Calendar</a>
-                    </div>
-                </li>
-                
-                <li class="dropdown-parent">
-                    <a href="javascript:void(0)"><i class="fas fa-building"></i> Departments <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="/engineering/index.php/2012-12-08-09-16-45/electrical-engg">Electrical Engg.</a>
-                        <a href="https://footwearengg.dei.ac.in/">Footwear Technology</a>
-                        <a href="https://agriengg.dei.ac.in">Agricultural Engineering</a>
-                        <a href="/engineering/index.php/2012-12-08-09-16-45/mechanical-engg">Mechanical Engg.</a>
-                        <a href="https://civilengg.dei.ac.in/">Civil Engineering</a>
-                    </div>
-                </li>
-                
-                <li class="active dropdown-parent">
-                    <a href="javascript:void(0)"><i class="fas fa-users"></i> Faculty & Staff <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="https://agriengg.dei.ac.in/index.php/faculty-staff">Agricultural Engg. Faculty</a>
-                        <a href="/engineering/index.php/2012-12-08-09-23-43/electrical-engg-faculty" class="active">Electrical Engg. Faculty</a>
-                        <a href="/engineering/index.php/2012-12-08-09-23-43/mechanical-engg-faculty">Mechanical Engg. Faculty</a>
-                        <a href="https://footwearengg.dei.ac.in/index.php/faculty-staff">Footwear Technology Faculty</a>
-                        <a href="https://civilengg.dei.ac.in/index.php/faculty-staff">Civil Engg. Faculty</a>
-                        <a href="/engineering/index.php/2012-12-08-09-23-43/core-courses-faculty">Core Courses Faculty</a>
-                        <a href="/engineering/index.php/2012-12-08-09-23-43/acheivements">Achievements</a>
-                    </div>
-                </li>
-                
-                <li class="dropdown-parent">
-                    <a href="javascript:void(0)"><i class="fas fa-briefcase"></i> Placement <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="/engineering/index.php/placement/placement-cell">Placement Cell</a>
-                        <a href="https://www.dei.ac.in/dei/index.php?option=com_content&view=category&layout=blog&id=50&Itemid=287">Alumni</a>
-                    </div>
-                </li>
-                
-                <li class="dropdown-parent">
-                    <a href="javascript:void(0)"><i class="fas fa-user-graduate"></i> Students <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="/engineering/index.php/students/incentives-to-students">Incentives to Students</a>
-                        <a href="/engineering/index.php/students/students-achievements">Student's Achievements</a>
-                        <a href="/engineering/index.php/students/ie-student-s-chapter">IE Student's Chapter</a>
-                    </div>
-                </li>
-                
-                <li class="dropdown-parent">
-                    <a href="javascript:void(0)"><i class="fas fa-flask"></i> Research <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <a href="/engineering/index.php/2012-12-08-09-34-06/research-areas">Research Areas</a>
-                        <a href="/engineering/index.php/2012-12-08-09-34-06/r-d-projects">R & D Projects</a>
-                        <a href="/engineering/index.php/2012-12-08-09-34-06/electrical-engg-publication">Electrical Engg. Publication</a>
-                        <a href="/engineering/index.php/2012-12-08-09-34-06/mechanical-engg-publications">Mechanical Engg. Publications</a>
-                        <a href="/engineering/index.php/2012-12-08-09-34-06/footware-tech-publications-patents">Footwear Tech. Publications</a>
-                        <a href="/engineering/index.php/2012-12-08-09-34-06/footwear-tech-patents">Footwear Tech. Patents</a>
-                        <a href="/engineering/index.php/2012-12-08-09-34-06/electrical-engg-collaborations">Electrical Engg. Collaborations</a>
-                        <a href="/engineering/index.php/2012-12-08-09-34-06/mechanical-engg-collaborations">Mechanical Engg. Collaborations</a>
-                    </div>
-                </li>
-                
-                <li><a href="/engineering/index.php/contact"><i class="fas fa-address-book"></i> Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Navigation via JS -->
+    <div id="navbar-container"></div>
 
     <!-- Breadcrumb -->
     <div class="breadcrumb">
@@ -805,7 +69,8 @@
         <!-- Page Header -->
         <div class="page-header">
             <h1>Department of Electrical Engineering Faculty</h1>
-            <p>Meet our distinguished faculty members who are dedicated to excellence in teaching, research, and innovation in the field of Electrical Engineering.</p>
+            <p>Meet our distinguished faculty members who are dedicated to excellence in teaching, research, and
+                innovation in the field of Electrical Engineering.</p>
         </div>
 
         <!-- Filter Section -->
@@ -850,9 +115,12 @@
                         <h3><i class="fas fa-info-circle"></i> Department Information</h3>
                     </div>
                     <div class="card-content">
-                        <p>The Department of Electrical Engineering at Dayalbagh Educational Institute offers cutting-edge programs and research opportunities in various specializations including Power Systems, Control Systems, Electronics, and Renewable Energy.</p>
+                        <p>The Department of Electrical Engineering at Dayalbagh Educational Institute is known for its
+                            rigorous curriculum and research in Power Systems, Control Systems, Electronics, and
+                            Computer Science.</p>
                         <div style="margin-top: 15px;">
-                            <a href="/engineering/index.php/2012-12-08-09-16-45/electrical-engg" class="filter-btn" style="display: inline-block; background-color: var(--primary-blue); color: white; padding: 8px 16px; border-radius: 4px;">
+                            <a href="/engineering/index.php/2012-12-08-09-16-45/electrical-engg" class="filter-btn"
+                                style="display: inline-block; background-color: var(--primary-blue); color: white; padding: 8px 16px; border-radius: 4px;">
                                 <i class="fas fa-external-link-alt"></i> Visit Department
                             </a>
                         </div>
@@ -896,36 +164,44 @@
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="/engineering/index.php/industry-interaction"><i class="fas fa-arrow-right"></i> Industry Interaction</a></li>
+                        <li><a href="/engineering/index.php/industry-interaction"><i class="fas fa-arrow-right"></i>
+                                Industry Interaction</a></li>
                         <li><a href="/engineering/index.php/events"><i class="fas fa-arrow-right"></i> Events</a></li>
                         <li><a href="http://www.aicte-india.org/"><i class="fas fa-arrow-right"></i> AICTE</a></li>
                         <li><a href="/dei"><i class="fas fa-arrow-right"></i> DEI Home</a></li>
-                        <li><a href="/engineering/index.php/contact"><i class="fas fa-arrow-right"></i> Contact Us</a></li>
+                        <li><a href="/engineering/index.php/contact"><i class="fas fa-arrow-right"></i> Contact Us</a>
+                        </li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Departments</h4>
                     <ul class="footer-links">
-                        <li><a href="/engineering/index.php/2012-12-08-09-16-45/electrical-engg"><i class="fas fa-arrow-right"></i> Electrical Engineering</a></li>
-                        <li><a href="https://footwearengg.dei.ac.in/"><i class="fas fa-arrow-right"></i> Footwear Technology</a></li>
-                        <li><a href="https://agriengg.dei.ac.in"><i class="fas fa-arrow-right"></i> Agricultural Engineering</a></li>
-                        <li><a href="/engineering/index.php/2012-12-08-09-16-45/mechanical-engg"><i class="fas fa-arrow-right"></i> Mechanical Engineering</a></li>
-                        <li><a href="https://civilengg.dei.ac.in/"><i class="fas fa-arrow-right"></i> Civil Engineering</a></li>
+                        <li><a href="/engineering/index.php/2012-12-08-09-16-45/electrical-engg"><i
+                                    class="fas fa-arrow-right"></i> Electrical Engineering</a></li>
+                        <li><a href="https://footwearengg.dei.ac.in/"><i class="fas fa-arrow-right"></i> Footwear
+                                Technology</a></li>
+                        <li><a href="https://agriengg.dei.ac.in"><i class="fas fa-arrow-right"></i> Agricultural
+                                Engineering</a></li>
+                        <li><a href="/engineering/index.php/2012-12-08-09-16-45/mechanical-engg"><i
+                                    class="fas fa-arrow-right"></i> Mechanical Engineering</a></li>
+                        <li><a href="https://civilengg.dei.ac.in/"><i class="fas fa-arrow-right"></i> Civil
+                                Engineering</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-section">
                     <h4>Contact Information</h4>
                     <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt"></i> Faculty of Engineering<br>Dayalbagh Educational Institute<br>Dayalbagh, Agra - 282005, India</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Faculty of Engineering<br>Dayalbagh Educational
+                            Institute<br>Dayalbagh, Agra - 282005, India</p>
                         <p><i class="fas fa-phone"></i> Phone: +91-562-2801545</p>
                         <p><i class="fas fa-envelope"></i> Email: admin@dei.ac.in</p>
                         <p><i class="fas fa-globe"></i> Website: www.dei.ac.in/engineering</p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="copyright">
                 <p>Copyright © Dayalbagh Educational Institute (Deemed to be University) | Faculty of Engineering</p>
                 <p>Founded in 1950 | NAAC A+ Accredited Institution</p>
@@ -934,263 +210,256 @@
     </footer>
 
     <!-- JavaScript -->
+    <script src="navbar.js"></script>
     <script>
         // Faculty data from JSON
-        const facultyData = [
+        const rawFacultyData = [
             {
                 "name": "Prof. C. Patvardhan",
                 "designation": "Dean, Professor & Head of the Dept.",
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtocpatvardhan@googlemail.comcpatvardhan@googlemail.com",
-                "image": "/engineering/images/electtFacultyPics/Dr. C Patvardhan.JPG",
-                "category": "professor"
+                "email": "cpatvardhan@googlemail.com",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Dr.%20C%20Patvardhan.JPG"
             },
             {
                 "name": "Prof. Ajay Kumar Saxena",
                 "designation": "Professor",
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtoaksaxena61@gmail.comaksaxena61@gmail.com",
-                "image": "/engineering/images/electtFacultyPics/Prof. Ajay Kumar Saxena.jpg",
-                "category": "professor"
+                "email": "aksaxena61@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Prof.%20Ajay%20Kumar%20Saxena.jpg"
             },
             {
                 "name": "Prof. V Prem Pyara",
                 "designation": "Professor Emiritus",
                 "phone": "Tel: 0562-6548399",
                 "email": null,
-                "image": "/engineering/images/electtFacultyPics/Prof. V. Prem Pyara.jpg",
-                "category": "professor"
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Prof.%20V.%20Prem%20Pyara.jpg"
             },
             {
                 "name": "Prof. Devendra Kumar Chaturvedi",
                 "designation": "Professor",
                 "phone": "Tel: 0562-6548399",
                 "email": null,
-                "image": "/engineering/images/electtFacultyPics/Dr. DKC.JPG",
-                "category": "professor"
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Dr.%20DKC.JPG"
             },
             {
                 "name": "Prof. D. Bhagwan Das",
                 "designation": "Professor",
                 "phone": "Tel: +919319211217",
-                "email": "mailtodbhagwandas@dei.ac.in",
-                "image": "/engineering/images/electtFacultyPics/Prof. D. Bhagwan Das New.jpg",
-                "category": "professor"
+                "email": "dbhagwandas@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Prof. D. Bhagwan Das New.jpg"
             },
             {
                 "name": "Prof. Man Mohan Agarwal",
                 "designation": "Professor",
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtoa.manmohan@yahoo.co.ina.manmohan@yahoo.co.in",
-                "image": "/engineering/images/electtFacultyPics/Dr. Manmohan.jpg",
-                "category": "professor"
+                "email": "a.manmohan@yahoo.co.in",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Dr. Manmohan.jpg"
             },
             {
                 "name": "Prof. G. S. Sailesh Babu",
                 "designation": "Professor",
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtobabu.sailesh@gmail.combabu.sailesh@gmail.com",
-                "image": "/engineering/images/electtFacultyPics/Dr G. S. Sailesh Babu.jpg",
-                "category": "professor"
+                "email": "babu.sailesh@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Dr G. S. Sailesh Babu.jpg"
             },
             {
                 "name": "Prof. Ashish Saini",
                 "designation": "Professor",
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtoashishdei711@dei.ac.inashishdei711@dei.ac.in",
-                "image": "/engineering/images/electtFacultyPics/Dr. Ashish Saini.jpg",
-                "category": "professor"
+                "email": "ashishdei711@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Dr. Ashish Saini.jpg"
             },
             {
                 "name": "Dr. K. Srinivas",
                 "designation": "Associate Professor",
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtoksri12@gmail.comksri12@gmail.com",
-                "image": "/engineering/images/electtFacultyPics/Dr K.Srinivas.jpg",
-                "category": "associate"
+                "email": "ksri12@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Dr K.Srinivas.jpg"
             },
             {
                 "name": "Dr. Kedri Janardhana",
                 "designation": "Assistant Professor",
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtojanardhan.kedri@gmail.comjanardhan.kedri@gmail.com",
-                "image": "/engineering/images/electtFacultyPics/Mr K. Janardhan.jpg",
-                "category": "assistant"
+                "email": "janardhan.kedri@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Mr K. Janardhan.jpg"
             },
             {
                 "name": "Dr V. Prem Prakash",
                 "designation": "Assistant Professor",
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtovpremprakash@acm.orgvpremprakash@acm.org",
-                "image": "/engineering/images/electtFacultyPics/Mr.V Prem Prakash.jpg",
-                "category": "assistant"
+                "email": "vpremprakash@acm.org",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Mr.V Prem Prakash.jpg"
             },
             {
                 "name": "Mr. Gaurav Pratap Rana",
                 "designation": "Assistant Professor",
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtogauravpratap@dei.ac.in",
-                "image": "/engineering/images/electtFacultyPics/Gprana.jpg",
-                "category": "assistant"
+                "email": "gauravpratap@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Gprana.jpg"
             },
             {
                 "name": "Dr. Subho Upadhyay",
                 "designation": "Assistant Professor",
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtosubhome2k10@gmail.com",
-                "image": "/engineering/images/electtFacultyPics/Mr.Subho.jpg",
-                "category": "assistant"
+                "email": "subhome2k10@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Mr.Subho.jpg"
             },
             {
                 "name": "Dr. Rajeev Kumar Chauhan",
-                "designation": "Assistant Professor",
+                "designation": "Dr. Rajeev Kumar Chauhan\n\r\n\t\t\t\t\t\tAssistant Professor",
                 "phone": "Mobile No.: +91-9411860126",
-                "email": "mailtorajeevnitj@gmail.com",
-                "image": "/engineering/images/electtFacultyPics/Dr. Rajeev Kumar.jpg",
-                "category": "assistant"
+                "email": "rajeevnitj@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Dr. Rajeev Kumar.jpg"
             },
             {
                 "name": "Dr. Gufran Ahmad",
-                "designation": "Assistant Professor",
+                "designation": "Dr. Gufran Ahmad\n\r\n\t\t\t\t\t\tAssistant Professor",
                 "phone": "Mobile No.: +91-562-6548399",
-                "email": "mailtogufranahmad@dei.ac.in",
-                "image": "/engineering/images/electtFacultyPics/Mr. Gufran.png",
-                "category": "assistant"
+                "email": "gufranahmad@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Mr. Gufran.png"
             },
             {
                 "name": "Dr. A. Charan Kumari",
                 "designation": "Assistant Professor",
-                "phone": "Tel: 0562-6548399",
-                "email": "mailtocharankumari@dei.ac.in",
-                "image": "/engineering/images/electtFacultyPics/Dr. A Charan Kumari.jpg",
-                "category": "assistant"
+                "phone": "Tel: 0562-6548399",
+                "email": "charankumari@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Dr. A Charan Kumari.jpg"
             },
             {
-                "name": "Dr. Rajat Kumar",
+                "name": "Dr. Rajat Kumar",
                 "designation": "Assistant Professor",
                 "phone": "Mobile No.: +91-562-6548399",
-                "email": "mailtorajatkumar@dei.ac.inrajatkumar@dei.ac.in",
-                "image": "/engineering/images/electtFacultyPics/Rajat_HQ_Pic.jpg",
-                "category": "assistant"
+                "email": "rajatkumar@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Rajat_HQ_Pic.jpg"
             },
             {
                 "name": "Dr. Tanmai Kulshreshtha",
                 "designation": "Assistant Professor",
                 "phone": "Mobile No.: +91-562-6548399",
-                "email": "mailtotanmaik@dei.ac.in",
-                "image": "/engineering/images/electtFacultyPics/Tanmai_Picture.JPG",
-                "category": "assistant"
+                "email": "tanmaik@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Tanmai_Picture.JPG"
+            },
+            {
+                "name": null,
+                "designation": null,
+                "phone": null,
+                "email": null,
+                "image": null
             },
             {
                 "name": "Ms. Akella Vandana",
-                "designation": "Teaching Staff",
+                "designation": null,
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtovandana.akella@dei.ac.invandana.akella@dei.ac.in",
-                "image": "/engineering/images/electtFacultyPics/Vandana.jpg",
-                "category": "other"
+                "email": "vandana.akella@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Vandana.jpg"
             },
             {
-                "name": "Khushboo Dixit",
-                "designation": "Teaching Staff",
+                "name": "",
+                "designation": null,
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtokhushbudixit22@gmail.comkhushbudixit22@gmail.com",
-                "image": "/engineering/images/electtFacultyPics/Khushboo Dixit.jpg",
-                "category": "other"
+                "email": "khushbudixit22@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Khushboo Dixit.jpg"
             },
             {
                 "name": "Monika Singh",
-                "designation": "Teaching Staff",
+                "designation": null,
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtosinghmoni1994@gmail.comsinghmoni1994@gmail.com",
-                "image": "/engineering/images/electtFacultyPics/Monika Singh.jpg",
-                "category": "other"
+                "email": "singhmoni1994@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Monika Singh.jpg"
             },
             {
                 "name": "Ms. Priya Asthana",
-                "designation": "Teaching Staff",
+                "designation": null,
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtopriyaasthana@dei.ac.inpriyaasthana@dei.ac.in",
-                "image": "/engineering/images/electtFacultyPics/Priya Asthana.png",
-                "category": "other"
+                "email": "priyaasthana@dei.ac.in",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Priya Asthana.png"
             },
             {
                 "name": "Ms. Shivani Gautam",
-                "designation": "Teaching Staff",
+                "designation": null,
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtoshivanigautam1694@gmail.com",
-                "image": "/engineering/images/electtFacultyPics/Ms. Shivani Gautam.png",
-                "category": "other"
+                "email": "shivanigautam1694@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Ms. Shivani Gautam.png"
             },
             {
                 "name": "Brig. P D Gupta",
                 "designation": "Adjunct Faculty",
                 "phone": "Tel: 0562-6548399",
-                "email": "mailtopdguta57@gmail.com",
-                "image": "/engineering/images/electtFacultyPics/Brig PD Gupta.jpg",
-                "category": "adjunct"
+                "email": "pdguta57@gmail.com",
+                "image": "https://www.dei.ac.in/engineering/images/electtFacultyPics/Brig PD Gupta.jpg"
             }
         ];
 
-        // Filter out empty entries
-        const validFacultyData = facultyData.filter(faculty => 
-            faculty.name && faculty.name.trim() !== "" && 
-            faculty.designation && faculty.designation.trim() !== ""
-        );
+        // Process faculty data to add categories
+        const facultyData = rawFacultyData.map(f => {
+            let category = 'other';
+            let des = (f.designation || '').toLowerCase();
 
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (event) => {
-            if (!navMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
-                navMenu.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            if (des.includes('professor') && !des.includes('associate') && !des.includes('assistant')) {
+                category = 'professor';
+            } else if (des.includes('associate professor')) {
+                category = 'associate';
+            } else if (des.includes('assistant professor')) {
+                category = 'assistant';
+            } else if (des.includes('adjunct')) {
+                category = 'adjunct';
             }
+
+            return { ...f, category };
         });
+
+        // Filter out empty entries
+        const validFacultyData = facultyData.filter(faculty =>
+            faculty.name && faculty.name.trim() !== ""
+        );
 
         // Function to create faculty card
         function createFacultyCard(faculty) {
             // Clean email string
             let emailText = '';
             let emailHref = '';
-            
-            if (faculty.email) {
+
+            // Handle array of emails or string or null
+            let emailStr = '';
+            if (Array.isArray(faculty.emails)) {
+                emailStr = faculty.emails[0]; // Take first
+            } else if (faculty.email) {
+                emailStr = faculty.email;
+            }
+
+            if (emailStr) {
                 // Extract email from the string
-                const emailMatch = faculty.email.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+                const emailMatch = emailStr.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
                 if (emailMatch) {
                     emailText = emailMatch[0];
                     emailHref = `mailto:${emailMatch[0]}`;
                 } else {
-                    emailText = faculty.email.replace(/mailto/g, '');
-                    emailHref = faculty.email;
+                    emailText = emailStr.replace(/mailto/g, '');
+                    emailHref = emailStr;
                 }
             }
-            
+
             // Clean phone string
             const phoneText = faculty.phone ? faculty.phone.replace(/Tel:|Mobile No\.:/g, '').trim() : '';
 
             const card = document.createElement('div');
             card.className = `faculty-card ${faculty.category}`;
             card.setAttribute('data-category', faculty.category);
-            
+
+            // Default designation if null
+            const designation = faculty.designation ? faculty.designation.replace(/\n\r/g, '').trim() : 'Faculty Member';
+
             card.innerHTML = `
                 <div class="faculty-card-header">
                     <div class="faculty-info">
                         <h3 class="faculty-name">${faculty.name}</h3>
-                        <p class="faculty-designation">${faculty.designation}</p>
+                        <p class="faculty-designation">${designation}</p>
                     </div>
-                    ${faculty.image ? 
-                        `<img src="${faculty.image}" alt="${faculty.name}" class="faculty-image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEwMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMjAiIGZpbGw9IiM1YjZjN2QiLz48cGF0aCBkPSJNNTAuNSAzNEM1NC4wOTE0IDM0IDU3IDMwLjc0MzggNTcgMjYuN0M1NyAyMi42NTYyIDU0LjA5MTQgMTkuNCA1MC41IDE5LjRDNDYuOTA4NiAxOS40IDQ0IDIyLjY1NjIgNDQgMjYuN0M0NCAzMC43NDM4IDQ2LjkwODYgMzQgNTAuNSAzNFoiIGZpbGw9IiNlOGY0ZjgiLz48cGF0aCBkPSJNNzUgOTZIMjVDMTkuNDc3MiA5NiAxNSA4OS45NTU5IDE1IDgyLjZWNTUuNEMxNSA0OC4wNDQxIDE5LjQ3NzIgNDIgMjUgNDJINzVDODAuNTIyOCA0MiA4NSA0OC4wNDQxIDg1IDU1LjRWODIuNkM4NSA4OS45NTU5IDgwLjUyMjggOTYgNzUgOTZaIiBmaWxsPSIjZThmNGY4Ii8+PC9zdmc+'">` : 
-                        `<div class="placeholder-image"><i class="fas fa-user-tie"></i></div>`
-                    }
+                    ${faculty.image ?
+                    `<img src="${faculty.image}" alt="${faculty.name}" class="faculty-image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEwMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMjAiIGZpbGw9IiM1YjZjN2QiLz48cGF0aCBkPSJNNTAuNSAzNEM1NC4wOTE0IDM0IDU3IDMwLjc0MzggNTcgMjYuN0M1NyAyMi42NTYyIDU0LjA5MTQgMTkuNCA1MC41IDE5LjRDNDYuOTA4NiAxOS40IDQ0IDIyLjY1NjIgNDQgMjYuN0M0NCAzMC43NDM4IDQ2LjkwODYgMzQgNTAuNSAzNFoiIGZpbGw9IiNlOGY0ZjgiLz48cGF0aCBkPSJNNzUgOTZIMjVDMTkuNDc3MiA5NiAxNSA4OS45NTU5IDE1IDgyLjZWNTUuNEMxNSA0OC4wNDQxIDE5LjQ3NzIgNDIgMjUgNDJINzVDODAuNTIyOCA0MiA4NSA0OC4wNDQxIDg1IDU1LjRWODIuNkM4NSA4OS45NTU5IDgwLjUyMjggOTYgNzUgOTZaIiBmaWxsPSIjZThmNGY4Ii8+PC9zdmc+'">` :
+                    `<div class="placeholder-image"><i class="fas fa-user-tie"></i></div>`
+                }
                 </div>
                 <div class="faculty-card-content">
                     <div class="contact-info">
@@ -1212,7 +481,7 @@
                     </div>
                 </div>
             `;
-            
+
             return card;
         }
 
@@ -1225,14 +494,14 @@
                     <span>${faculty.name}</span>
                 </a>
             `;
-            
+
             // Add click event to scroll to faculty card
             li.querySelector('a').addEventListener('click', () => {
                 const facultyName = faculty.name.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
                 const card = document.querySelector(`[data-name="${facultyName}"]`);
                 if (card) {
                     card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    
+
                     // Add highlight effect
                     card.style.boxShadow = '0 0 0 3px var(--accent-gold)';
                     setTimeout(() => {
@@ -1240,7 +509,7 @@
                     }, 2000);
                 }
             });
-            
+
             return li;
         }
 
@@ -1262,7 +531,7 @@
                     }, 300);
                 }
             });
-            
+
             // Update active filter button
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.classList.remove('active');
@@ -1276,7 +545,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const facultyGrid = document.getElementById('facultyGrid');
             const relatedLinks = document.getElementById('relatedLinks');
-            
+
             // Sort faculty by designation hierarchy
             const designationOrder = {
                 'professor': 1,
@@ -1285,26 +554,26 @@
                 'adjunct': 4,
                 'other': 5
             };
-            
+
             const sortedFaculty = [...validFacultyData].sort((a, b) => {
                 return designationOrder[a.category] - designationOrder[b.category];
             });
-            
+
             // Generate faculty cards
             sortedFaculty.forEach(faculty => {
                 const card = createFacultyCard(faculty);
-                
+
                 // Add data attribute for filtering by name
                 const facultyNameId = faculty.name.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
                 card.setAttribute('data-name', facultyNameId);
-                
+
                 facultyGrid.appendChild(card);
-                
+
                 // Add to related links
                 const link = createRelatedLink(faculty);
                 relatedLinks.appendChild(link);
             });
-            
+
             // Setup filter buttons
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
@@ -1312,33 +581,18 @@
                     filterFaculty(filter);
                 });
             });
-            
+
             // Initialize with all faculty visible
             filterFaculty('all');
-            
-            // Dropdown menu enhancement for mobile
-            const dropdownParents = document.querySelectorAll('.dropdown-parent');
-            
-            dropdownParents.forEach(parent => {
-                if (window.innerWidth <= 992) {
-                    parent.addEventListener('click', (e) => {
-                        if (!e.target.classList.contains('dropdown')) {
-                            e.preventDefault();
-                            const dropdown = parent.querySelector('.dropdown');
-                            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-                        }
-                    });
-                }
-            });
         });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -1350,4 +604,5 @@
         });
     </script>
 </body>
+
 </html>

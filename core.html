@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Civil Engineering Faculty | Dayalbagh Educational Institute</title>
+    <title>Core Courses Faculty | Dayalbagh Educational Institute</title>
     <link rel="shortcut icon" href="https://www.dei.ac.in/engineering/templates/jsn_epic_free/favicon.ico"
         type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -59,7 +59,7 @@
                 <span class="separator">/</span>
                 <a href="javascript:void(0)">Faculty & Staff</a>
                 <span class="separator">/</span>
-                <span>Civil Engineering Faculty</span>
+                <span>Core Courses Faculty</span>
             </div>
         </div>
     </div>
@@ -68,21 +68,21 @@
     <main class="container">
         <!-- Page Header -->
         <div class="page-header">
-            <h1>Department of Civil Engineering Faculty</h1>
-            <p>Meet our distinguished faculty members who are dedicated to excellence in teaching, research, and
-                innovation in the field of Civil Engineering.</p>
+            <h1>Core Courses Faculty</h1>
+            <p>Meet our faculty members teaching core courses like Mathematics, Chemistry, English, and more, providing
+                a strong foundation for engineering education.</p>
         </div>
 
         <!-- Filter Section -->
         <div class="filter-section">
-            <h3>Filter by Designation</h3>
+            <h3>Filter by Course</h3>
             <div class="filter-options">
                 <button class="filter-btn active" data-filter="all">All Faculty</button>
-                <button class="filter-btn" data-filter="professor">Professors</button>
-                <button class="filter-btn" data-filter="associate">Associate Professors</button>
-                <button class="filter-btn" data-filter="assistant">Assistant Professors</button>
-                <button class="filter-btn" data-filter="guest">Guest/Honorary</button>
-                <button class="filter-btn" data-filter="other">Other Staff</button>
+                <button class="filter-btn" data-filter="mathematics">Mathematics</button>
+                <button class="filter-btn" data-filter="chemistry">Chemistry</button>
+                <button class="filter-btn" data-filter="english">English</button>
+                <button class="filter-btn" data-filter="sociology">Sociology</button>
+                <button class="filter-btn" data-filter="other">Other Courses</button>
             </div>
         </div>
 
@@ -115,15 +115,8 @@
                         <h3><i class="fas fa-info-circle"></i> Department Information</h3>
                     </div>
                     <div class="card-content">
-                        <p>The Department of Civil Engineering prepares students to plan, design, construct, and manage
-                            infrastructure projects, with a focus on sustainable development and modern technologies.
-                        </p>
-                        <div style="margin-top: 15px;">
-                            <a href="https://civilengg.dei.ac.in/" class="filter-btn"
-                                style="display: inline-block; background-color: var(--primary-blue); color: white; padding: 8px 16px; border-radius: 4px;">
-                                <i class="fas fa-external-link-alt"></i> Visit Department
-                            </a>
-                        </div>
+                        <p>The Core Courses curriculum ensures that students have a robust understanding of fundamental
+                            sciences and humanities, essential for a well-rounded engineer.</p>
                     </div>
                 </div>
 
@@ -215,125 +208,65 @@
         // Faculty data from JSON
         const rawFacultyData = [
             {
-                "name": "Prof. Sanjay Kumar Srivastava",
-                "designation": "Professor & Head of Department",
-                "phone": null,
-                "email": "ssrivastava@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Dr%20Sanjay%20Srivastava.jpg"
+                "name": "Dr. Surat Kumar",
+                "qualification": "M. Sc. (Chemistry), Ph.D.",
+                "course": "Chemistry"
             },
             {
-                "name": "Ms. Krishma Yadav",
-                "designation": "Assistant Professor",
-                "phone": null,
-                "email": "karishmayadav@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Mrs.%20karishma%20Yadav.jpg"
+                "name": "Dr. R. Kumar",
+                "qualification": "M. Sc. (Maths), Ph.D.",
+                "course": "Mathematics"
             },
             {
-                "name": "Dr. Ishant Singhal",
-                "designation": "Assistant Professor",
-                "phone": null,
-                "email": "ishantsinghal@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Dr%20Ishant.PNG"
+                "name": "Dr. S. P. Singh",
+                "qualification": "M. Sc. (Mathematics), Ph.D.",
+                "course": "Mathematics"
             },
             {
-                "name": "Mr. Devesh Jaysawal",
-                "designation": "Assistant Professor",
-                "phone": null,
-                "email": "deveshjaysawal@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Mr%20Devesh%20Jaysawal.jpg"
+                "name": "Dr. A. P. Tyagi",
+                "qualification": "M. Sc. (Mathematics), Ph.D.",
+                "course": "Mathematics"
             },
             {
-                "name": "Mr. Mohd Sharique Ahmad",
-                "designation": "Guest Faculty",
-                "phone": null,
-                "email": "mohdsharique@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/IMG_3168.jpg"
+                "name": "Dr. S. Sharma",
+                "qualification": "M. Sc. (Mathematics), Ph.D.",
+                "course": "Applied Mathematics"
             },
             {
-                "name": "Mr. Randeep Lohra",
-                "designation": "Guest Faculty",
-                "phone": null,
-                "email": "randeeplohra@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Mr%20Randeep.jpg"
+                "name": "Dr. J. K. Verma",
+                "qualification": "M. A. (English), Ph.D.",
+                "course": "English"
             },
             {
-                "name": "Mr. Bhanu Prakash Sharma",
-                "designation": "Guest Faculty",
-                "phone": null,
-                "email": "bhanuprakashsharma001@yahoo.com",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Sh.%20B%20P%20Sharma.jpg"
+                "name": "Dr. G. Kumar",
+                "qualification": "M.A., Ph.D.",
+                "course": "Arts Appreciation"
             },
             {
-                "name": "Mr. ChandraMohan",
-                "designation": "Honorary Faculty",
-                "phone": null,
-                "email": "ankitmohankhattar@gmail.com",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Sh.%20Chandramohan.jpg"
+                "name": "Dr. G. Mathur",
+                "qualification": "M. Sc., Ph.D.",
+                "course": "Household Management"
             },
             {
-                "name": "Mr. S. Suresh",
-                "designation": "Honorary Faculty",
-                "phone": null,
-                "email": "suranraj@gmail.com",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Mr.%20S%20Suresh.jpg"
-            },
-            {
-                "name": "Mr. Rajat Gupta",
-                "designation": "Guest Faculty",
-                "phone": null,
-                "email": "rajatgupta@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Mr%20Rajat%20Gupta.jpg"
-            },
-            {
-                "name": "Ms. Divyanshi Sharma",
-                "designation": "Guest Faculty",
-                "phone": null,
-                "email": "divyanshi.sharma@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Miss%20Divyanshi%20Sharma.jpg"
-            },
-            {
-                "name": "Ms. Priyanka Chauhan",
-                "designation": "Guest Faculty",
-                "phone": null,
-                "email": "prianca35@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Miss%20Priyanka.jpg"
-            },
-            {
-                "name": "Ms. Neerja Singh",
-                "designation": "Guest Faculty",
-                "phone": null,
-                "email": "neerja.singh@dei.ac.in",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Miss%20Neerja.jpg"
-            },
-            {
-                "name": "Mr. Gaurav Kumar",
-                "designation": "Senior Technical Assistant",
-                "phone": null,
-                "email": "kumaragrawal04121992@gmail.com",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/Gaurav%20Pic.jpg"
-            },
-            {
-                "name": "Mr. Sonu Kumar",
-                "designation": "Laboratory Assistant",
-                "phone": null,
-                "email": "sonukumartdl100@gmail.com",
-                "image": "https://civilengg.dei.ac.in/images/Faculty%20pictures/sonu.png"
+                "name": "Dr. P. Jain",
+                "qualification": "M.A., M. Phil., Ph.D.",
+                "course": "Sociology"
             }
         ];
 
         // Process faculty data to add categories
         const facultyData = rawFacultyData.map(f => {
             let category = 'other';
-            let des = (f.designation || '').toLowerCase();
+            let course = (f.course || '').toLowerCase();
 
-            if (des.includes('professor') && !des.includes('associate') && !des.includes('assistant')) {
-                category = 'professor';
-            } else if (des.includes('associate professor')) {
-                category = 'associate';
-            } else if (des.includes('assistant professor')) {
-                category = 'assistant';
-            } else if (des.includes('guest') || des.includes('honorary') || des.includes('adjunct')) {
-                category = 'guest';
+            if (course.includes('math')) {
+                category = 'mathematics';
+            } else if (course.includes('chemistry')) {
+                category = 'chemistry';
+            } else if (course.includes('english')) {
+                category = 'english';
+            } else if (course.includes('sociology')) {
+                category = 'sociology';
             }
 
             return { ...f, category };
@@ -346,39 +279,11 @@
 
         // Function to create faculty card
         function createFacultyCard(faculty) {
-            // Clean email string
-            let emailText = '';
-            let emailHref = '';
-
-            // Handle array of emails or string or null
-            let emailStr = '';
-            if (Array.isArray(faculty.emails)) {
-                emailStr = faculty.emails[0]; // Take first
-            } else if (faculty.email) {
-                emailStr = faculty.email;
-            }
-
-            if (emailStr) {
-                // Extract email from the string
-                const emailMatch = emailStr.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
-                if (emailMatch) {
-                    emailText = emailMatch[0];
-                    emailHref = `mailto:${emailMatch[0]}`;
-                } else {
-                    emailText = emailStr.replace(/mailto/g, '');
-                    emailHref = emailStr;
-                }
-            }
-
-            // Clean phone string
-            const phoneText = faculty.phone ? faculty.phone.replace(/Tel:|Mobile No\.:/g, '').trim() : '';
-
             const card = document.createElement('div');
             card.className = `faculty-card ${faculty.category}`;
             card.setAttribute('data-category', faculty.category);
 
-            // Default designation if null
-            const designation = faculty.designation || 'Faculty Member';
+            const designation = faculty.course || 'Core Course Faculty';
 
             card.innerHTML = `
                 <div class="faculty-card-header">
@@ -387,25 +292,16 @@
                         <p class="faculty-designation">${designation}</p>
                     </div>
                     ${faculty.image ?
-                    `<img src="${faculty.image}" alt="${faculty.name}" class="faculty-image" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEwMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMjAiIGZpbGw9IiM1YjZjN2QiLz48cGF0aCBkPSJNNTAuNSAzNEM1NC4wOTE0IDM0IDU3IDMwLjc0MzggNTcgMjYuN0M1NyAyMi42NTYyIDU0LjA5MTQgMTkuNCA1MC41IDE5LjRDNDYuOTA4NiAxOS40IDQ0IDIyLjY1NjIgNDQgMjYuN0M0NCAzMC43NDM4IDQ2LjkwODYgMzQgNTAuNSAzNFoiIGZpbGw9IiNlOGY0ZjgiLz48cGF0aCBkPSJNNzUgOTZIMjVDMTkuNDc3MiA5NiAxNSA4OS45NTU5IDE1IDgyLjZWNTUuNEMxNSA0OC4wNDQxIDE5LjQ3NzIgNDIgMjUgNDJINzVDODAuNTIyOCA0MiA4NSA0OC4wNDQxIDg1IDU1LjRWODIuNkM4NSA4OS45NTU5IDgwLjUyMjggOTYgNzUgOTZaIiBmaWxsPSIjZThmNGY4Ii8+PC9zdmc+'">` :
+                    `<img src="${faculty.image}" alt="${faculty.name}" class="faculty-image">` :
                     `<div class="placeholder-image"><i class="fas fa-user-tie"></i></div>`
                 }
                 </div>
                 <div class="faculty-card-content">
                     <div class="contact-info">
-                        ${phoneText ? `
+                        ${faculty.qualification ? `
                             <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <div><strong>Phone:</strong> ${phoneText}</div>
-                            </div>
-                        ` : ''}
-                        ${emailText ? `
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <strong>Email:</strong> 
-                                    <a href="${emailHref}" style="color: var(--primary-blue); word-break: break-word;">${emailText}</a>
-                                </div>
+                                <i class="fas fa-graduation-cap"></i>
+                                <div><strong>Qualification:</strong> ${faculty.qualification}</div>
                             </div>
                         ` : ''}
                     </div>
@@ -476,21 +372,8 @@
             const facultyGrid = document.getElementById('facultyGrid');
             const relatedLinks = document.getElementById('relatedLinks');
 
-            // Sort faculty by designation hierarchy
-            const designationOrder = {
-                'professor': 1,
-                'associate': 2,
-                'assistant': 3,
-                'guest': 4,
-                'other': 5
-            };
-
-            const sortedFaculty = [...validFacultyData].sort((a, b) => {
-                return designationOrder[a.category] - designationOrder[b.category];
-            });
-
             // Generate faculty cards
-            sortedFaculty.forEach(faculty => {
+            validFacultyData.forEach(faculty => {
                 const card = createFacultyCard(faculty);
 
                 // Add data attribute for filtering by name
